@@ -1,0 +1,599 @@
+current_nco_code,current_occupation,current_occupation_code,target_occupation,target_occupation_code,target_isco3,skill_similarity,common_skill_count,missing_skill_count,target_skill_count,skill_gap_score,transition_score,personalized_score,personalized_level,recommendation_rank
+111,government minister,1111.2,senator,1111.7,111,0.8966,26,3,29,0.1034,0.91728,0.933824,Excellent,1
+111,government minister,1111.2,member of parliament,1111.5,111,0.8667,26,4,30,0.1333,0.8933600000000002,0.9146880000000002,Excellent,2
+111,member of parliament,1111.5,senator,1111.7,111,0.8621,25,4,29,0.1379,0.88968,0.911744,Excellent,3
+111,senator,1111.7,member of parliament,1111.5,111,0.8333,25,5,30,0.1667,0.8666400000000001,0.8933120000000001,Excellent,4
+111,member of parliament,1111.5,government minister,1111.2,111,0.8125,26,6,32,0.1875,0.8500000000000001,0.8800000000000001,Excellent,5
+112,chief executive officer,1120.3,chief operating officer,1120.4,112,0.9318,41,3,44,0.0682,0.94544,0.956352,Excellent,1
+112,chief operating officer,1120.4,chief executive officer,1120.3,112,0.6212,41,25,66,0.3788,0.69696,0.757568,Excellent,2
+112,airport chief executive,1120.3.1,airport director,1324.1,132,0.5517,16,13,29,0.4483,0.44136,0.553088,Good,3
+112,public employment service manager,1120.5,employment programme coordinator,2422.3,242,0.4444,12,15,27,0.5556,0.35552,0.484416,Moderate,4
+112,chief executive officer,1120.3,branch manager,1213.5.1,121,0.4384,32,41,73,0.5616,0.35072,0.480576,Moderate,5
+121,business manager,1213.5,department manager,1219.4,121,0.9875,79,1,80,0.0125,0.99,0.992,Excellent,1
+121,business manager,1213.5,branch manager,1213.5.1,121,0.9726,71,2,73,0.0274,0.97808,0.982464,Excellent,2
+121,department manager,1219.4,business manager,1213.5,121,0.9405,79,5,84,0.0595,0.9524,0.96192,Excellent,3
+121,department manager,1219.4,branch manager,1213.5.1,121,0.9315,68,5,73,0.0685,0.9452,0.95616,Excellent,4
+121,branch manager,1213.5.1,department manager,1219.4,121,0.85,68,12,80,0.15,0.8800000000000001,0.904,Excellent,5
+122,public relations manager,1222.1.2,advertising manager,1222.1.1,122,0.9636,53,2,55,0.0364,0.97088,0.976704,Excellent,1
+122,public relations manager,1222.1.2,communication manager,1222.1,122,0.8361,51,10,61,0.1639,0.8688800000000001,0.8951040000000001,Excellent,2
+122,marketing manager,1221.3.2,promotion manager,1221.3.3,122,0.8148,44,10,54,0.1852,0.8518399999999999,0.881472,Excellent,3
+122,marketing manager,1221.3.2,sales manager,1221.3.2.1,122,0.7581,47,15,62,0.2419,0.8064800000000001,0.8451840000000002,Excellent,4
+122,leather goods product development manager,1223.2.1.4,leather goods product developer,2163.2,216,1.0,21,0,21,0.0,0.8,0.8400000000000001,Excellent,5
+131,aquaculture production manager,1312.3,aquaculture husbandry manager,1312.2,131,0.3667,22,38,60,0.6333,0.49336,0.5446880000000001,Good,1
+131,aquaculture husbandry manager,1312.2,aquaculture production manager,1312.3,131,0.3492,22,41,63,0.6508,0.47936,0.5334880000000001,Good,2
+131,aquaculture husbandry manager,1312.2,aquaculture harvesting manager,1312.1,131,0.3333,17,34,51,0.6667,0.46664,0.523312,Good,3
+131,aquaculture production manager,1312.3,aquaculture harvesting manager,1312.1,131,0.3137,16,35,51,0.6863,0.45096,0.5107680000000001,Good,4
+131,aquaculture production manager,1312.3,aquaculture hatchery manager,6221.3,622,0.5294,27,24,51,0.4706,0.42352,0.488816,Moderate,5
+132,distribution manager,1324.3.1,agricultural machinery and equipment distribution manager,1324.3.1.6.1,132,1.0,26,0,26,0.0,1.0,1.0,Excellent,1
+132,distribution manager,1324.3.1,electrical household appliances distribution manager,1324.3.1.6.10,132,1.0,26,0,26,0.0,1.0,1.0,Excellent,2
+132,distribution manager,1324.3.1,electronic and telecommunications equipment and parts distribution manager,1324.3.1.6.11,132,1.0,26,0,26,0.0,1.0,1.0,Excellent,3
+132,distribution manager,1324.3.1,"fish, crustaceans and molluscs distribution manager",1324.3.1.6.12,132,1.0,26,0,26,0.0,1.0,1.0,Excellent,4
+132,distribution manager,1324.3.1,flowers and plants distribution manager,1324.3.1.6.13,132,1.0,26,0,26,0.0,1.0,1.0,Excellent,5
+133,chief information officer,1330.2,chief technology officer,1330.3,133,0.7711,64,19,83,0.2289,0.81688,0.853504,Excellent,1
+133,chief technology officer,1330.3,chief information officer,1330.2,133,0.7191,64,25,89,0.2809,0.77528,0.8202240000000001,Excellent,2
+133,chief data officer,1330.1,ICT information and knowledge manager,1330.1.1,133,0.5238,22,20,42,0.4762,0.61904,0.6952320000000001,Good,3
+133,ICT project manager,1330.7,ICT product manager,1330.6,133,0.52,26,24,50,0.48,0.6160000000000001,0.6928000000000001,Good,4
+133,ICT project manager,1330.7,ICT operations manager,1330.5,133,0.4634,19,22,41,0.5366,0.57072,0.656576,Good,5
+134,primary school head teacher,1345.1.6,secondary school head teacher,1345.1.8,134,0.9057,48,5,53,0.0943,0.92456,0.939648,Excellent,1
+134,secondary school head teacher,1345.1.8,primary school head teacher,1345.1.6,134,0.9057,48,5,53,0.0943,0.92456,0.939648,Excellent,2
+134,head of higher education institutions,1345.1.5,further education principal,1345.1.4,134,0.9024,37,4,41,0.0976,0.92192,0.937536,Excellent,3
+134,secondary school head teacher,1345.1.8,further education principal,1345.1.4,134,0.878,36,5,41,0.122,0.9024,0.92192,Excellent,4
+134,further education principal,1345.1.4,head of higher education institutions,1345.1.5,134,0.8605,37,6,43,0.1395,0.8884000000000001,0.9107200000000002,Excellent,5
+141,restaurant manager,1412.1,venue director,3332.2.1,333,0.8056,29,7,36,0.1944,0.64448,0.715584,Excellent,1
+141,hospitality entertainment manager,1411.2,tourist animator,2659.4,265,0.7576,25,8,33,0.2424,0.6060800000000001,0.6848640000000001,Good,2
+141,restaurant manager,1412.1,accommodation manager,1411.1,141,0.4167,15,21,36,0.5833,0.5333600000000001,0.6266880000000001,Good,3
+141,hospitality entertainment manager,1411.2,accommodation manager,1411.1,141,0.3889,14,22,36,0.6111,0.51112,0.6088960000000001,Good,4
+141,accommodation manager,1411.1,rooms division manager,1411.3,141,0.3824,13,21,34,0.6176,0.50592,0.604736,Good,5
+142,bookshop manager,1420.4.8,press and stationery shop manager,1420.4.36,142,0.9677,30,1,31,0.0323,0.97416,0.979328,Excellent,1
+142,audiology equipment shop manager,1420.4.4,medical goods shop manager,1420.4.30,142,0.9375,30,2,32,0.0625,0.95,0.96,Excellent,2
+142,clothing shop manager,1420.4.10,shoe and leather accessories shop manager,1420.4.38,142,0.9333,28,2,30,0.0667,0.94664,0.9573120000000002,Excellent,3
+142,shop manager,1420.4,telecommunication equipment shop manager,1420.4.40,142,0.9333,28,2,30,0.0667,0.94664,0.9573120000000002,Excellent,4
+142,ammunition shop manager,1420.4.1,hardware and paint shop manager,1420.4.26,142,0.931,27,2,29,0.069,0.9448,0.95584,Excellent,5
+143,cultural facilities manager,1431.1,cultural centre director,1431.1.1,143,0.86,43,7,50,0.14,0.8880000000000001,0.9104,Excellent,1
+143,cultural facilities manager,1431.1,performance production manager,1431.1.2,143,0.775,31,9,40,0.225,0.8200000000000001,0.8560000000000001,Excellent,2
+143,recreational facilities manager,1431.2,beauty salon manager,1431.2.1,143,0.6769,44,21,65,0.3231,0.74152,0.7932159999999999,Excellent,3
+143,gambling manager,1431.2.3,betting manager,1431.2.2,143,0.675,27,13,40,0.325,0.74,0.792,Excellent,4
+143,recreational facilities manager,1431.2,spa manager,1431.2.5,143,0.6571,46,24,70,0.3429,0.7256800000000001,0.7805440000000001,Excellent,5
+211,cosmologist,2111.2,astronomer,2111.1,211,0.9385,61,4,65,0.0615,0.9508,0.93564,Excellent,1
+211,geologist,2114.1,seismologist,2114.1.10,211,0.8689,53,8,61,0.1311,0.8951200000000001,0.8910960000000002,Excellent,2
+211,physicist,2111.3,astronomer,2111.1,211,0.8462,55,10,65,0.1538,0.87696,0.876568,Excellent,3
+211,oceanographer,2114.1.8,seismologist,2114.1.10,211,0.8033,49,12,61,0.1967,0.8426400000000001,0.8491120000000001,Excellent,4
+211,astronomer,2111.1,cosmologist,2111.2,211,0.8026,61,15,76,0.1974,0.8420799999999999,0.8486640000000001,Excellent,5
+212,statistician,2120.6,demographer,2120.2,212,0.75,48,16,64,0.25,0.8,0.6900000000000002,Good,1
+212,statistician,2120.6,biometrician,2120.6.1,212,0.7123,52,21,73,0.2877,0.7698400000000001,0.6658720000000001,Good,2
+212,statistician,2120.6,mathematician,2120.5,212,0.6875,55,25,80,0.3125,0.75,0.6500000000000001,Good,3
+212,biometrician,2120.6.1,demographer,2120.2,212,0.6719,43,21,64,0.3281,0.7375200000000002,0.6400160000000003,Good,4
+212,mathematician,2120.5,demographer,2120.2,212,0.6719,43,21,64,0.3281,0.7375200000000002,0.6400160000000003,Good,5
+213,pharmacologist,2131.7,immunologist,2131.6,213,0.7821,61,17,78,0.2179,0.82568,0.860544,Excellent,1
+213,water quality analyst,2133.13,groundwater monitoring technician,2133.15.1,213,0.7561,31,10,41,0.2439,0.80488,0.843904,Excellent,2
+213,aquaculture biologist,2131.4.1,aquatic animal health professional,2250.5,225,1.0,70,0,70,0.0,0.8,0.8400000000000001,Excellent,3
+213,aquaculture biologist,2131.4.1,marine biologist,2131.4.9,213,0.75,33,11,44,0.25,0.8,0.8400000000000001,Excellent,4
+213,biochemist,2131.4.2,immunologist,2131.6,213,0.7436,58,20,78,0.2564,0.79488,0.835904,Excellent,5
+214,metallurgist,2146.5,process metallurgist,2146.5.2,214,1.0,37,0,37,0.0,1.0,0.9875,Excellent,1
+214,water engineer,2142.1.11,wastewater engineer,2143.3,214,1.0,33,0,33,0.0,1.0,0.9875,Excellent,2
+214,metallurgist,2146.5,chemical metallurgist,2146.5.1,214,0.9737,37,1,38,0.0263,0.97896,0.970668,Excellent,3
+214,water engineer,2142.1.11,drainage engineer,2142.1.3,214,0.973,36,1,37,0.027,0.9784,0.97022,Excellent,4
+214,liquid fuel engineer,2146.4,petroleum engineer,2146.10,214,0.963,26,1,27,0.037,0.9704,0.96382,Excellent,5
+215,microelectronics engineer,2152.1.7,electromagnetic engineer,2151.1.2,215,0.8202,73,16,89,0.1798,0.85616,0.8474280000000001,Excellent,1
+215,sensor engineer,2152.1.15,electromagnetic engineer,2151.1.2,215,0.809,72,17,89,0.191,0.8472000000000002,0.8402600000000001,Excellent,2
+215,microelectronics engineer,2152.1.7,microsystem engineer,2152.1.10,215,0.8077,84,20,104,0.1923,0.84616,0.8394280000000001,Excellent,3
+215,sensor engineer,2152.1.15,microsystem engineer,2152.1.10,215,0.8077,84,20,104,0.1923,0.84616,0.8394280000000001,Excellent,4
+215,microsystem engineer,2152.1.10,electromagnetic engineer,2151.1.2,215,0.7978,71,18,89,0.2022,0.8382400000000001,0.833092,Excellent,5
+216,animator,2166.3,special effects artist,2166.13,216,0.9714,34,1,35,0.0286,0.97712,0.981696,Excellent,1
+216,costume designer,2163.1.2,puppet designer,2163.1.7,216,0.9273,51,4,55,0.0727,0.94184,0.953472,Excellent,2
+216,performance lighting designer,2166.11,puppet designer,2163.1.7,216,0.9273,51,4,55,0.0727,0.94184,0.953472,Excellent,3
+216,animation layout artist,2166.2,special effects artist,2166.13,216,0.8571,30,5,35,0.1429,0.88568,0.908544,Excellent,4
+216,leather goods designer,2163.1.3.3,leather goods product developer,2163.2,216,0.8571,18,3,21,0.1429,0.88568,0.908544,Excellent,5
+221,specialised doctor,2212.1,general practitioner,2211.1,221,0.9107,51,5,56,0.0893,0.92856,0.942848,Excellent,1
+221,specialised doctor,2212.1,medicine lecturer,2310.1.25,231,0.6015,80,53,133,0.3985,0.4812,0.58496,Good,2
+221,general practitioner,2211.1,museum scientist,2621.8,262,0.5636,31,24,55,0.4364,0.45088,0.5607040000000001,Good,3
+221,specialised doctor,2212.1,museum scientist,2621.8,262,0.5636,31,24,55,0.4364,0.45088,0.5607040000000001,Good,4
+221,general practitioner,2211.1,veterinary scientist,2250.9,225,0.5536,31,25,56,0.4464,0.44288,0.554304,Good,5
+222,nurse responsible for general care,2221.2,specialist nurse,2221.3,222,0.7174,66,26,92,0.2826,0.7739200000000002,0.8191360000000001,Excellent,1
+222,advanced nurse practitioner,2221.1,specialist nurse,2221.3,222,0.6848,63,29,92,0.3152,0.7478400000000001,0.7982720000000001,Excellent,2
+222,specialist nurse,2221.3,advanced nurse practitioner,2221.1,222,0.6774,63,30,93,0.3226,0.7419200000000001,0.7935360000000002,Excellent,3
+222,specialist nurse,2221.3,nurse responsible for general care,2221.2,222,0.6226,66,40,106,0.3774,0.69808,0.758464,Excellent,4
+222,nurse responsible for general care,2221.2,advanced nurse practitioner,2221.1,222,0.5914,55,38,93,0.4086,0.67312,0.738496,Excellent,5
+223,acupuncturist,2230.2.1,traditional chinese medicine therapist,2230.2.3,223,0.7105,27,11,38,0.2895,0.7684,0.7897200000000001,Excellent,1
+223,acupuncturist,2230.2.1,homeopath,2230.2.2,223,0.6176,21,13,34,0.3824,0.69408,0.7302640000000001,Excellent,2
+223,aromatherapist,2230.1,traditional chinese medicine therapist,2230.2.3,223,0.6053,23,15,38,0.3947,0.68424,0.722392,Excellent,3
+223,complementary therapist,2230.2,traditional chinese medicine therapist,2230.2.3,223,0.5,19,19,38,0.5,0.6000000000000001,0.6550000000000001,Good,4
+223,traditional chinese medicine therapist,2230.2.3,acupuncturist,2230.2.1,223,0.5,27,27,54,0.5,0.6000000000000001,0.6550000000000001,Good,5
+225,animal therapist,2250.4,animal chiropractor,2250.1,225,1.0,23,0,23,0.0,1.0,1.0,Excellent,1
+225,animal therapist,2250.4,animal osteopath,2250.2,225,1.0,33,0,33,0.0,1.0,1.0,Excellent,2
+225,animal therapist,2250.4,animal physiotherapist,2250.3,225,1.0,23,0,23,0.0,1.0,1.0,Excellent,3
+225,animal therapist,2250.4,animal hydrotherapist,2250.4.1,225,1.0,22,0,22,0.0,1.0,1.0,Excellent,4
+225,animal therapist,2250.4,animal massage therapist,2250.4.2,225,1.0,22,0,22,0.0,1.0,1.0,Excellent,5
+226,physiotherapist,2264.2,advanced physiotherapist,2264.1,226,0.9306,67,5,72,0.0694,0.94448,0.955584,Excellent,1
+226,occupational therapist,2269.4,occupational therapy assistant,2269.5,226,0.8913,41,5,46,0.1087,0.91304,0.930432,Excellent,2
+226,biomedical scientist,2269.13,biomedical scientist advanced,2269.14,226,0.8667,52,8,60,0.1333,0.8933600000000002,0.9146880000000002,Excellent,3
+226,diagnostic radiographer,2269.8.1,nuclear medicine radiographer,2269.8.2,226,0.8657,58,9,67,0.1343,0.89256,0.914048,Excellent,4
+226,biomedical scientist,2269.13,specialist biomedical scientist,2269.16,226,0.85,51,9,60,0.15,0.8800000000000001,0.904,Excellent,5
+231,classical languages lecturer,2310.1.9,modern languages lecturer,2310.1.26,231,0.9756,80,2,82,0.0244,0.98048,0.984384,Excellent,1
+231,linguistics lecturer,2310.1.23,modern languages lecturer,2310.1.26,231,0.9512,78,4,82,0.0488,0.96096,0.968768,Excellent,2
+231,modern languages lecturer,2310.1.26,classical languages lecturer,2310.1.9,231,0.9412,80,5,85,0.0588,0.95296,0.962368,Excellent,3
+231,medicine lecturer,2310.1.25,healthcare specialist lecturer,2310.1.19,231,0.9405,79,5,84,0.0595,0.9524,0.96192,Excellent,4
+231,communications lecturer,2310.1.10,journalism lecturer,2310.1.21,231,0.931,81,6,87,0.069,0.9448,0.95584,Excellent,5
+232,business and marketing vocational teacher,2320.1.7,business administration vocational teacher,2320.1.6,232,0.7391,34,12,46,0.2609,0.79128,0.833024,Excellent,1
+232,vocational teacher,2320.1,business administration vocational teacher,2320.1.6,232,0.7391,34,12,46,0.2609,0.79128,0.833024,Excellent,2
+232,vocational teacher,2320.1,travel and tourism vocational teacher,2320.1.24,232,0.7209,31,12,43,0.2791,0.7767200000000001,0.8213760000000001,Excellent,3
+232,business administration vocational teacher,2320.1.6,hospitality vocational teacher,2320.1.15,232,0.7073,29,12,41,0.2927,0.7658400000000001,0.8126720000000001,Excellent,4
+232,business and marketing vocational teacher,2320.1.7,hospitality vocational teacher,2320.1.15,232,0.7073,29,12,41,0.2927,0.7658400000000001,0.8126720000000001,Excellent,5
+233,classical languages teacher secondary school,2330.1.5,modern languages teacher secondary school,2330.1.12,233,1.0,52,0,52,0.0,1.0,1.0,Excellent,1
+233,literature teacher at secondary school,2330.1.10,modern languages teacher secondary school,2330.1.12,233,0.9423,49,3,52,0.0577,0.95384,0.9630720000000002,Excellent,2
+233,modern languages teacher secondary school,2330.1.12,classical languages teacher secondary school,2330.1.5,233,0.9286,52,4,56,0.0714,0.94288,0.954304,Excellent,3
+233,secondary school teacher,2330.1,science teacher secondary school,2330.1.18,233,0.9259,50,4,54,0.0741,0.94072,0.952576,Excellent,4
+233,secondary school teacher,2330.1,modern languages teacher secondary school,2330.1.12,233,0.9231,48,4,52,0.0769,0.93848,0.950784,Excellent,5
+234,primary school teacher,2341.1,Steiner school teacher,2341.1.1,234,0.9636,53,2,55,0.0364,0.97088,0.976704,Excellent,1
+234,Montessori school teacher,2342.3,Freinet school teacher,2342.2,234,0.9608,49,2,51,0.0392,0.96864,0.974912,Excellent,2
+234,Freinet school teacher,2342.2,Montessori school teacher,2342.3,234,0.9074,49,5,54,0.0926,0.92592,0.940736,Excellent,3
+234,Montessori school teacher,2342.3,early years teacher,2342.1,234,0.8936,42,5,47,0.1064,0.91488,0.931904,Excellent,4
+234,Freinet school teacher,2342.2,early years teacher,2342.1,234,0.8723,41,6,47,0.1277,0.89784,0.918272,Excellent,5
+235,special educational needs teacher,2352.1,early years special educational needs teacher,2352.1.2,235,0.9655,56,2,58,0.0345,0.9724000000000002,0.97792,Excellent,1
+235,language school teacher,2353.1,further education teacher,2359.9,235,0.8696,40,6,46,0.1304,0.89568,0.916544,Excellent,2
+235,special educational needs teacher primary school,2352.1.5,special educational needs teacher secondary school,2352.1.6,235,0.8644,51,8,59,0.1356,0.8915200000000001,0.913216,Excellent,3
+235,special educational needs teacher primary school,2352.1.5,early years special educational needs teacher,2352.1.2,235,0.8621,50,8,58,0.1379,0.88968,0.911744,Excellent,4
+235,assistive technologist,2359.5,special educational needs coordinator,2351.4,235,0.8605,37,6,43,0.1395,0.8884000000000001,0.9107200000000002,Excellent,5
+241,investment fund manager,2412.7,investment manager,2412.6.3,241,0.7255,37,14,51,0.2745,0.7804,0.8243199999999999,Excellent,1
+241,investment fund manager,2412.7,investment analyst,2413.1.2,241,0.6977,30,13,43,0.3023,0.75816,0.8065279999999999,Excellent,2
+241,investor relations manager,2412.6.4,dividend analyst,2411.1.6,241,0.6897,20,9,29,0.3103,0.75176,0.8014080000000001,Excellent,3
+241,investment fund manager,2412.7,investor relations manager,2412.6.4,241,0.6739,31,15,46,0.3261,0.73912,0.791296,Excellent,4
+241,investment adviser,2412.6,investment analyst,2413.1.2,241,0.6512,28,15,43,0.3488,0.72096,0.7767680000000001,Excellent,5
+242,policy officer,2422.12,competition policy officer,2422.12.2,242,1.0,30,0,30,0.0,1.0,1.0,Excellent,1
+242,policy officer,2422.12,immigration policy officer,2422.12.9,242,1.0,37,0,37,0.0,1.0,1.0,Excellent,2
+242,public procurement specialist,2422.15,procurement category specialist,2422.14,242,0.9706,33,1,34,0.0294,0.97648,0.981184,Excellent,3
+242,policy officer,2422.12,agricultural policy officer,2422.12.1,242,0.9697,32,1,33,0.0303,0.97576,0.980608,Excellent,4
+242,policy officer,2422.12,cultural policy officer,2422.12.3,242,0.9167,33,3,36,0.0833,0.93336,0.946688,Excellent,5
+243,technical sales representative,2433.6,technical sales representative in agricultural machinery and equipment,2433.6.1,243,1.0,29,0,29,0.0,1.0,1.0,Excellent,1
+243,technical sales representative,2433.6,technical sales representative in chemical products,2433.6.2,243,1.0,29,0,29,0.0,1.0,1.0,Excellent,2
+243,technical sales representative,2433.6,"technical sales representative in hardware, plumbing and heating equipment",2433.6.3,243,1.0,29,0,29,0.0,1.0,1.0,Excellent,3
+243,technical sales representative,2433.6,technical sales representative in mining and construction machinery,2433.6.5,243,1.0,29,0,29,0.0,1.0,1.0,Excellent,4
+243,technical sales representative,2433.6,technical sales representative in office machinery and equipment,2433.6.6,243,1.0,29,0,29,0.0,1.0,1.0,Excellent,5
+251,mobile application developer,2514.2.2,embedded systems software developer,2514.2.1,251,0.9605,73,3,76,0.0395,0.9684,0.97472,Excellent,1
+251,ICT application developer,2514.2,embedded systems software developer,2514.2.1,251,0.9474,72,4,76,0.0526,0.95792,0.966336,Excellent,2
+251,industrial mobile devices software developer,2514.3,embedded systems software developer,2514.2.1,251,0.9474,72,4,76,0.0526,0.95792,0.966336,Excellent,3
+251,software developer,2512.4,embedded systems software developer,2514.2.1,251,0.9474,72,4,76,0.0526,0.95792,0.966336,Excellent,4
+251,ICT system developer,2511.15,embedded systems software developer,2514.2.1,251,0.9342,71,5,76,0.0658,0.94736,0.957888,Excellent,5
+252,data warehouse designer,2521.5,database designer,2521.2,252,0.9709,100,3,103,0.0291,0.97672,0.968876,Excellent,1
+252,database designer,2521.2,data warehouse designer,2521.5,252,0.9091,100,10,110,0.0909,0.92728,0.929324,Excellent,2
+252,data warehouse designer,2521.5,knowledge engineer,2529.9,252,0.7303,65,24,89,0.2697,0.78424,0.8148920000000001,Excellent,3
+252,database designer,2521.2,knowledge engineer,2529.9,252,0.7191,64,25,89,0.2809,0.77528,0.807724,Excellent,4
+252,chief ICT security officer,2529.1,cybersecurity risk manager,2529.8,252,0.6528,47,25,72,0.3472,0.72224,0.765292,Excellent,5
+261,lawyer,2611.1,prosecutor,2611.1.2,261,1.0,33,0,33,0.0,1.0,1.0,Excellent,1
+261,lawyer,2611.1,corporate lawyer,2611.1.1,261,0.9697,64,2,66,0.0303,0.97576,0.980608,Excellent,2
+261,judge,2612.1,supreme court judge,2612.1.1,261,0.9667,29,1,30,0.0333,0.97336,0.978688,Excellent,3
+261,lawyer,2611.1,legal consultant,2619.7,261,0.8919,33,4,37,0.1081,0.91352,0.930816,Excellent,4
+261,lawyer,2611.1,mediator,2619.9,261,0.7619,32,10,42,0.2381,0.80952,0.8476160000000001,Excellent,5
+262,cultural visitor services manager,2621.5,arts education officer,2355.1,235,1.0,10,0,10,0.0,0.8,0.8025000000000001,Excellent,1
+262,cultural archive manager,2621.4,collection manager,2621.2,262,0.7333,22,8,30,0.2667,0.78664,0.7918120000000001,Excellent,2
+262,collection manager,2621.2,cultural archive manager,2621.4,262,0.6471,22,12,34,0.3529,0.7176800000000001,0.7366440000000001,Excellent,3
+262,exhibition registrar,2621.7,art handler,3433.1,343,0.8667,13,2,15,0.1333,0.6933600000000001,0.717188,Excellent,4
+262,librarian,2622.2,archivist,2621.1,262,0.5185,14,13,27,0.4815,0.6148,0.65434,Good,5
+263,hospital social worker,2635.3.16,crisis situation social worker,2635.3.9,263,1.0,68,0,68,0.0,1.0,1.0,Excellent,1
+263,social counsellor,2635.1,bereavement counsellor,2635.1.1,263,1.0,46,0,46,0.0,1.0,1.0,Excellent,2
+263,social counsellor,2635.1,drug and alcohol addiction counsellor,2635.1.2,263,1.0,54,0,54,0.0,1.0,1.0,Excellent,3
+263,social counsellor,2635.1,marriage counsellor,2635.1.4,263,1.0,58,0,58,0.0,1.0,1.0,Excellent,4
+263,hospital social worker,2635.3.16,community care case worker,2635.3.4,263,0.9855,68,1,69,0.0145,0.9884000000000002,0.9907200000000004,Excellent,5
+264,journalist,2642.1,foreign correspondent,2642.1.11,264,1.0,48,0,48,0.0,1.0,1.0,Excellent,1
+264,journalist,2642.1,business journalist,2642.1.3,264,1.0,58,0,58,0.0,1.0,1.0,Excellent,2
+264,journalist,2642.1,columnist,2642.1.4,264,1.0,45,0,45,0.0,1.0,1.0,Excellent,3
+264,journalist,2642.1,crime journalist,2642.1.6,264,1.0,53,0,53,0.0,1.0,1.0,Excellent,4
+264,journalist,2642.1,entertainment journalist,2642.1.9,264,1.0,59,0,59,0.0,1.0,1.0,Excellent,5
+265,producer,2654.3,video and motion picture producer,2654.3.2,265,0.9,36,4,40,0.1,0.9200000000000002,0.9360000000000002,Excellent,1
+265,musician,2652.3,singer,2652.3.2,265,0.8837,38,5,43,0.1163,0.90696,0.925568,Excellent,2
+265,street performer,2659.2.5,stand-up comedian,2659.2.4,265,0.88,22,3,25,0.12,0.904,0.9232,Excellent,3
+265,variety artist,2659.2.6,stand-up comedian,2659.2.4,265,0.84,21,4,25,0.16,0.8720000000000001,0.8976000000000002,Excellent,4
+265,video and motion picture director,2654.1.8,director of photography,2654.1.3,265,0.7895,30,8,38,0.2105,0.8316000000000001,0.86528,Excellent,5
+311,leather goods quality technician,3119.16.4,leather goods quality control laboratory technician,3119.16.3,311,1.0,12,0,12,0.0,1.0,1.0,Excellent,1
+311,production engineering technician,3115.1.16,industrial engineering technician,3119.8,311,0.9706,33,1,34,0.0294,0.97648,0.981184,Excellent,2
+311,process engineering technician,3119.14,industrial engineering technician,3119.8,311,0.9412,32,2,34,0.0588,0.95296,0.962368,Excellent,3
+311,aircraft engine inspector,3115.1.2,motor vehicle engine inspector,3115.1.12,311,0.9167,33,3,36,0.0833,0.93336,0.946688,Excellent,4
+311,rolling stock engine inspector,3115.1.19,motor vehicle engine inspector,3115.1.12,311,0.9167,33,3,36,0.0833,0.93336,0.946688,Excellent,5
+312,wood assembly supervisor,3122.3.8,machinery assembly supervisor,3122.3.4,312,0.9722,35,1,36,0.0278,0.97776,0.982208,Excellent,1
+312,aircraft assembly supervisor,3122.3.1,motor vehicle assembly supervisor,3122.3.5,312,0.9487,37,2,39,0.0513,0.95896,0.967168,Excellent,2
+312,vessel assembly supervisor,3122.3.7,motor vehicle assembly supervisor,3122.3.5,312,0.9487,37,2,39,0.0513,0.95896,0.967168,Excellent,3
+312,wood production supervisor,3122.4.16,wood assembly supervisor,3122.3.8,312,0.9268,38,3,41,0.0732,0.94144,0.953152,Excellent,4
+312,motor vehicle assembly supervisor,3122.3.5,aircraft assembly supervisor,3122.3.1,312,0.925,37,3,40,0.075,0.9400000000000002,0.9520000000000002,Excellent,5
+313,electrical transmission system operator,3131.3.2,electrical power distributor,3131.3.1,313,0.9259,25,2,27,0.0741,0.94072,0.952576,Excellent,1
+313,electrical power distributor,3131.3.1,electrical transmission system operator,3131.3.2,313,0.8065,25,6,31,0.1935,0.8452,0.87616,Excellent,2
+313,power production plant operator,3131.3,solar power plant operator,3131.3.8,313,0.7903,49,13,62,0.2097,0.8322400000000001,0.8657920000000001,Excellent,3
+313,solar power plant operator,3131.3.8,power production plant operator,3131.3,313,0.7778,49,14,63,0.2222,0.8222400000000001,0.8577920000000001,Excellent,4
+313,solar power plant operator,3131.3.8,hydroelectric plant operator,3131.3.5,313,0.76,19,6,25,0.24,0.808,0.8464,Excellent,5
+314,biology technician,3141.2.3,zoology technician,3141.2.5,314,0.8462,33,6,39,0.1538,0.87696,0.901568,Excellent,1
+314,biology technician,3141.2.3,bacteriology technician,3141.2.1,314,0.8205,32,7,39,0.1795,0.8564,0.8851200000000001,Excellent,2
+314,biochemistry technician,3141.2.2,bacteriology technician,3141.2.1,314,0.7949,31,8,39,0.2051,0.83592,0.868736,Excellent,3
+314,bacteriology technician,3141.2.1,biochemistry technician,3141.2.2,314,0.7045,31,13,44,0.2955,0.7636000000000001,0.81088,Excellent,4
+314,biology technician,3141.2.3,biochemistry technician,3141.2.2,314,0.7045,31,13,44,0.2955,0.7636000000000001,0.81088,Excellent,5
+315,aircraft pilot,3153.2,co-pilot,3153.2.1,315,1.0,52,0,52,0.0,1.0,0.975,Excellent,1
+315,aircraft pilot,3153.2,commercial pilot,3153.2.2,315,1.0,45,0,45,0.0,1.0,0.975,Excellent,2
+315,aircraft pilot,3153.2,airline transport pilot,3153.2.2.1,315,1.0,47,0,47,0.0,1.0,0.975,Excellent,3
+315,aircraft pilot,3153.2,helicopter pilot,3153.2.4,315,1.0,44,0,44,0.0,1.0,0.975,Excellent,4
+315,aircraft pilot,3153.2,private pilot,3153.2.5,315,1.0,36,0,36,0.0,1.0,0.975,Excellent,5
+321,clinical perfusion scientist,3211.1,respiratory therapy technician,3259.7,325,0.9032,28,3,31,0.0968,0.7225600000000001,0.7780480000000001,Excellent,1
+321,pharmacy assistant,3213.1,pharmacy technician,2262.2,226,0.8269,43,9,52,0.1731,0.66152,0.7292160000000001,Excellent,2
+321,medical laboratory assistant,3212.2,scientific laboratory technician,3141.2,314,0.7317,60,22,82,0.2683,0.58536,0.668288,Good,3
+321,radiation therapist,3211.2,clinical perfusion scientist,3211.1,321,0.381,16,26,42,0.619,0.5048,0.60384,Good,4
+321,pharmacy assistant,3213.1,physiotherapy assistant,3255.2,325,0.5854,24,17,41,0.4146,0.46832,0.5746560000000001,Good,5
+322,maternity support worker,3222.1,healthcare assistant,5321.1,532,0.4565,21,25,46,0.5435,0.3652,0.49216,Moderate,1
+322,maternity support worker,3222.1,midwife,2222.1,222,0.4318,38,50,88,0.5682,0.34544,0.476352,Moderate,2
+322,maternity support worker,3222.1,dental hygienist,2261.3,226,0.3333,12,24,36,0.6667,0.26664,0.413312,Moderate,3
+322,maternity support worker,3222.1,physiotherapy assistant,3255.2,325,0.3171,13,28,41,0.6829,0.25368,0.402944,Moderate,4
+322,maternity support worker,3222.1,nurse assistant,5321.1.1,532,0.3167,19,41,60,0.6833,0.25336,0.402688,Moderate,5
+323,herbal therapist,3230.1,traditional chinese medicine therapist,2230.2.3,223,0.5789,22,16,38,0.4211,0.46312,0.545496,Good,1
+323,herbal therapist,3230.1,shiatsu practitioner,3255.3,325,0.5179,29,27,56,0.4821,0.41432,0.506456,Good,2
+323,herbal therapist,3230.1,aromatherapist,2230.1,223,0.5079,32,31,63,0.4921,0.40632,0.5000560000000001,Good,3
+323,herbal therapist,3230.1,homeopath,2230.2.2,223,0.5,17,17,34,0.5,0.4,0.4950000000000001,Moderate,4
+323,herbal therapist,3230.1,sophrologist,3255.4,325,0.5,25,25,50,0.5,0.4,0.4950000000000001,Moderate,5
+324,animal artificial insemination technician,3240.2.1,animal embryo transfer technician,3240.2.2,324,0.8235,28,6,34,0.1765,0.8588,0.88704,Excellent,1
+324,veterinary nurse,3240.2.4,veterinary technician,3240.2,324,0.8,44,11,55,0.2,0.8400000000000001,0.8720000000000001,Excellent,2
+324,alternative animal therapist,3240.1,animal massage therapist,2250.4.2,225,1.0,22,0,22,0.0,0.8,0.8400000000000001,Excellent,3
+324,veterinary technician,3240.2,veterinary nurse,3240.2.4,324,0.7333,44,16,60,0.2667,0.78664,0.829312,Excellent,4
+324,alternative animal therapist,3240.1,animal chiropractor,2250.1,225,0.9565,22,1,23,0.0435,0.7652000000000001,0.8121600000000002,Excellent,5
+325,medical records clerk,3252.1,clinical coder,3252.1.1,325,0.8696,20,3,23,0.1304,0.89568,0.916544,Excellent,1
+325,medical records manager,3252.2,clinical coder,3252.1.1,325,0.8696,20,3,23,0.1304,0.89568,0.916544,Excellent,2
+325,doctors' surgery assistant,3256.1,chiropractic assistant,3259.3,325,0.75,24,8,32,0.25,0.8,0.8400000000000001,Excellent,3
+325,massage therapist,3255.1,masseur/masseuse,5142.7,514,0.9583,46,2,48,0.0417,0.7666400000000001,0.813312,Excellent,4
+325,medical records manager,3252.2,medical records clerk,3252.1,325,0.6739,31,15,46,0.3261,0.73912,0.791296,Excellent,5
+331,foreign exchange broker,3311.2.1,foreign exchange trader,3311.3.2,331,0.9655,28,1,29,0.0345,0.9724000000000002,0.97792,Excellent,1
+331,stock broker,3311.2.5,securities broker,3311.2.4,331,0.9412,32,2,34,0.0588,0.95296,0.962368,Excellent,2
+331,loan officer,3312.5,mortgage broker,3312.8,331,0.9091,30,3,33,0.0909,0.92728,0.941824,Excellent,3
+331,loan officer,3312.5,mortgage loan underwriter,3312.6,331,0.8846,23,3,26,0.1154,0.90768,0.926144,Excellent,4
+331,mortgage broker,3312.8,mortgage loan underwriter,3312.6,331,0.8462,22,4,26,0.1538,0.87696,0.901568,Excellent,5
+332,wholesale merchant,3324.4,wholesale merchant in agricultural machinery and equipment,3324.4.1,332,1.0,19,0,19,0.0,1.0,1.0,Excellent,1
+332,wholesale merchant,3324.4,wholesale merchant in fish crustaceans and molluscs,3324.4.12,332,1.0,19,0,19,0.0,1.0,1.0,Excellent,2
+332,wholesale merchant,3324.4,wholesale merchant in flowers and plants,3324.4.13,332,1.0,19,0,19,0.0,1.0,1.0,Excellent,3
+332,wholesale merchant,3324.4,wholesale merchant in fruit and vegetables,3324.4.14,332,1.0,19,0,19,0.0,1.0,1.0,Excellent,4
+332,wholesale merchant,3324.4,"wholesale merchant in furniture, carpets and lighting equipment",3324.4.15,332,1.0,19,0,19,0.0,1.0,1.0,Excellent,5
+333,import export specialist,3331.2.1,import export specialist in agricultural machinery and equipment,3331.2.1.1,333,1.0,22,0,22,0.0,1.0,1.0,Excellent,1
+333,import export specialist,3331.2.1,"import export specialist in fish, crustaceans and molluscs",3331.2.1.12,333,1.0,25,0,25,0.0,1.0,1.0,Excellent,2
+333,import export specialist,3331.2.1,import export specialist in flowers and plants,3331.2.1.13,333,1.0,24,0,24,0.0,1.0,1.0,Excellent,3
+333,import export specialist,3331.2.1,import export specialist in fruit and vegetables,3331.2.1.14,333,1.0,25,0,25,0.0,1.0,1.0,Excellent,4
+333,import export specialist,3331.2.1,"import export specialist in furniture, carpets and lighting equipment",3331.2.1.15,333,1.0,22,0,22,0.0,1.0,1.0,Excellent,5
+334,scopist,3343.5,court reporter,3343.1.1,334,0.9615,25,1,26,0.0385,0.9692,0.97536,Excellent,1
+334,court reporter,3343.1.1,scopist,3343.5,334,0.9259,25,2,27,0.0741,0.94072,0.952576,Excellent,2
+334,data entry supervisor,3341.5,data entry clerk,4132.1,413,0.8235,28,6,34,0.1765,0.6588,0.7270400000000001,Excellent,3
+334,executive assistant,3343.3,management assistant,3343.4,334,0.4634,19,22,41,0.5366,0.57072,0.656576,Good,4
+334,management assistant,3343.4,executive assistant,3343.3,334,0.4634,19,22,41,0.5366,0.57072,0.656576,Good,5
+335,police detective,3355.2,police inspector,3355.3,335,0.8485,28,5,33,0.1515,0.8788,0.90304,Excellent,1
+335,police inspector,3355.3,police detective,3355.2,335,0.8485,28,5,33,0.1515,0.8788,0.90304,Excellent,2
+335,tax compliance officer,3352.1,tax inspector,3352.2,335,0.7667,23,7,30,0.2333,0.8133600000000001,0.8506880000000001,Excellent,3
+335,tax inspector,3352.2,tax compliance officer,3352.1,335,0.6765,23,11,34,0.3235,0.7412000000000001,0.7929600000000001,Excellent,4
+335,freight inspector,3359.5,marine cargo inspector,3359.5.1,335,0.5,11,11,22,0.5,0.6000000000000001,0.6800000000000002,Good,5
+341,adult community care worker,3412.4.1,residential home older adult care worker,3412.4.12,341,1.0,61,0,61,0.0,1.0,1.0,Excellent,1
+341,care home worker,3412.4.2,residential home older adult care worker,3412.4.12,341,1.0,61,0,61,0.0,1.0,1.0,Excellent,2
+341,child welfare worker,3412.4.3,residential childcare worker,3412.4.10,341,1.0,67,0,67,0.0,1.0,1.0,Excellent,3
+341,social care worker,3412.4,adult community care worker,3412.4.1,341,1.0,63,0,63,0.0,1.0,1.0,Excellent,4
+341,social care worker,3412.4,residential home adult care worker,3412.4.11,341,1.0,60,0,60,0.0,1.0,1.0,Excellent,5
+342,outdoor activities coordinator,3423.1.1,assistant outdoor animator,3423.1.2.1,342,1.0,16,0,16,0.0,1.0,1.0,Excellent,1
+342,outdoor activities coordinator,3423.1.1,specialised outdoor animator,3423.1.2.3,342,1.0,27,0,27,0.0,1.0,1.0,Excellent,2
+342,outdoor animator,3423.1.2,assistant outdoor animator,3423.1.2.1,342,1.0,16,0,16,0.0,1.0,1.0,Excellent,3
+342,outdoor animator,3423.1.2,specialised outdoor animator,3423.1.2.3,342,1.0,27,0,27,0.0,1.0,1.0,Excellent,4
+342,specialised outdoor animator,3423.1.2.3,assistant outdoor animator,3423.1.2.1,342,1.0,16,0,16,0.0,1.0,1.0,Excellent,5
+343,stage technician,3435.25.5,scenery technician,3435.25.3,343,0.9231,48,4,52,0.0769,0.93848,0.913284,Excellent,1
+343,performance lighting technician,3435.15,intelligent lighting engineer,3435.15.1,343,0.9216,47,4,51,0.0784,0.93728,0.912324,Excellent,2
+343,stage machinist,3435.25.4,automated fly bar operator,3435.4,343,0.9048,57,6,63,0.0952,0.92384,0.901572,Excellent,3
+343,automated fly bar operator,3435.4,stage machinist,3435.25.4,343,0.8906,57,7,64,0.1094,0.91248,0.8924839999999999,Excellent,4
+343,chef,3434.1,pastry chef,3434.1.2,343,0.871,27,4,31,0.129,0.8968,0.87994,Excellent,5
+351,ICT security technician,3512.3,ICT technician,3512.4,351,0.6,48,32,80,0.4,0.6799999999999999,0.744,Excellent,1
+351,ICT help desk agent,3512.1,ICT help desk manager,3512.2,351,0.5357,15,13,28,0.4643,0.62856,0.7028480000000001,Excellent,2
+351,webmaster,3514.1,ICT technician,3512.4,351,0.525,42,38,80,0.475,0.6200000000000001,0.6960000000000002,Good,3
+351,ICT technician,3512.4,ICT security technician,3512.3,351,0.5053,48,47,95,0.4947,0.60424,0.683392,Good,4
+351,ICT help desk manager,3512.2,ICT help desk agent,3512.1,351,0.4688,15,17,32,0.5312,0.57504,0.660032,Good,5
+352,performance video operator,3521.1.4,video technician,3521.1.11,352,0.8444,38,7,45,0.1556,0.8755200000000001,0.9004160000000001,Excellent,1
+352,sound operator,3521.1.10,performance video operator,3521.1.4,352,0.7869,48,13,61,0.2131,0.82952,0.8636160000000002,Excellent,2
+352,sound designer,3521.1.7,sound operator,3521.1.10,352,0.7324,52,19,71,0.2676,0.7859200000000002,0.8287360000000001,Excellent,3
+352,recording studio technician,3521.1.6,boom operator,3521.1.1,352,0.7037,19,8,27,0.2963,0.7629600000000001,0.8103680000000002,Excellent,4
+352,sound operator,3521.1.10,sound designer,3521.1.7,352,0.6933,52,23,75,0.3067,0.75464,0.803712,Excellent,5
+411,office clerk,4110.1,administrative assistant,3343.1,334,0.6098,25,16,41,0.3902,0.48784,0.590272,Good,1
+411,office clerk,4110.1,foreign language correspondence clerk,4419.2,441,0.5385,14,12,26,0.4615,0.4308,0.54464,Good,2
+411,office clerk,4110.1,secretary,4120.1,412,0.5116,22,21,43,0.4884,0.4092800000000001,0.5274240000000001,Good,3
+411,office clerk,4110.1,file clerk,4415.1,441,0.5,14,14,28,0.5,0.4,0.52,Good,4
+411,office clerk,4110.1,receptionist,4226.1,422,0.4571,16,19,35,0.5429,0.36568,0.492544,Moderate,5
+412,secretary,4120.1,administrative assistant,3343.1,334,0.6341,26,15,41,0.3659,0.5072800000000001,0.5933240000000001,Good,1
+412,secretary,4120.1,foreign language correspondence clerk,4419.2,441,0.5385,14,12,26,0.4615,0.4308,0.5321400000000001,Good,2
+412,secretary,4120.1,office clerk,4110.1,411,0.4583,22,26,48,0.5417,0.36664,0.480812,Moderate,3
+412,secretary,4120.1,receptionist,4226.1,422,0.4286,15,20,35,0.5714,0.34288,0.461804,Moderate,4
+412,secretary,4120.1,billing clerk,4311.1,431,0.375,9,15,24,0.625,0.3,0.4275,Moderate,5
+413,data entry clerk,4132.1,data entry supervisor,3341.5,334,0.6667,28,14,42,0.3333,0.53336,0.6266879999999999,Good,1
+413,typist,4131.1,scopist,3343.5,334,0.5926,16,11,27,0.4074,0.47408,0.579264,Good,2
+413,typist,4131.1,court reporter,3343.1.1,334,0.5769,15,11,26,0.4231,0.46152,0.5692159999999999,Good,3
+413,data entry clerk,4132.1,data quality specialist,2519.1,251,0.375,15,25,40,0.625,0.3,0.44,Moderate,4
+413,typist,4131.1,foreign language correspondence clerk,4419.2,441,0.3462,9,17,26,0.6538,0.27696,0.421568,Moderate,5
+421,casino cashier,4212.3,lottery cashier,5230.2,523,0.8333,15,3,18,0.1667,0.6666400000000001,0.7333120000000002,Excellent,1
+421,casino gaming manager,4212.4,casino pit boss,4212.4.1,421,0.5,11,11,22,0.5,0.6000000000000001,0.6800000000000002,Good,2
+421,casino pit boss,4212.4.1,casino gaming manager,4212.4,421,0.4783,11,12,23,0.5217,0.58264,0.666112,Good,3
+421,bingo caller,4212.1,bookmaker,4212.2,421,0.4737,9,10,19,0.5263,0.57896,0.663168,Good,4
+421,bookmaker,4212.2,bingo caller,4212.1,421,0.4737,9,10,19,0.5263,0.57896,0.663168,Good,5
+422,hospitality establishment receptionist,4224.1,hotel concierge,4229.2,422,0.913,21,2,23,0.087,0.9304,0.94432,Excellent,1
+422,hospitality establishment receptionist,4224.1,camping ground operative,4224.1.1,422,0.8462,22,4,26,0.1538,0.87696,0.901568,Excellent,2
+422,hospitality establishment receptionist,4224.1,night auditor,4224.2,422,0.8333,20,4,24,0.1667,0.8666400000000001,0.8933120000000001,Excellent,3
+422,camping ground operative,4224.1.1,night auditor,4224.2,422,0.7917,19,5,24,0.2083,0.8333600000000001,0.8666880000000001,Excellent,4
+422,night auditor,4224.2,camping ground operative,4224.1.1,422,0.7308,19,7,26,0.2692,0.78464,0.827712,Excellent,5
+431,financial markets back office administrator,4312.2.1,foreign exchange cashier,4312.3,431,0.625,15,9,24,0.375,0.7,0.76,Excellent,1
+431,insurance clerk,4312.4,investment clerk,4312.5,431,0.5625,18,14,32,0.4375,0.65,0.72,Excellent,2
+431,investment clerk,4312.5,insurance clerk,4312.4,431,0.5625,18,14,32,0.4375,0.65,0.72,Excellent,3
+431,back office specialist,4312.2,financial markets back office administrator,4312.2.1,431,0.5172,15,14,29,0.4828,0.6137600000000001,0.6910080000000001,Good,4
+431,foreign exchange cashier,4312.3,financial markets back office administrator,4312.2.1,431,0.5172,15,14,29,0.4828,0.6137600000000001,0.6910080000000001,Good,5
+432,raw materials warehouse specialist,4321.1.4,hide grader,7531.3,753,0.9412,16,1,17,0.0588,0.7529600000000001,0.7398680000000002,Excellent,1
+432,gas transmission system operator,4323.8,gas scheduling representative,4323.7,432,0.625,15,9,24,0.375,0.7,0.6975,Good,2
+432,gas scheduling representative,4323.7,gas transmission system operator,4323.8,432,0.5769,15,11,26,0.4231,0.66152,0.6667160000000001,Good,3
+432,port coordinator,4323.11,water traffic coordinator,4323.20,432,0.5588,19,15,34,0.4412,0.6470400000000001,0.655132,Good,4
+432,raw materials warehouse specialist,4321.1.4,leather production machine operator,8155.1,815,0.75,12,4,16,0.25,0.6000000000000001,0.6175000000000002,Good,5
+441,human resources assistant,4416.1,human resources officer,2423.3,242,0.6809,32,15,47,0.3191,0.54472,0.635776,Good,1
+441,postman/postwoman,4412.2,mail clerk,4412.1,441,0.4211,8,11,19,0.5789,0.53688,0.6295040000000001,Good,2
+441,proofreader,4413.1,copy editor,2642.1.5,264,0.6071,17,11,28,0.3929,0.48568,0.588544,Good,3
+441,mail clerk,4412.1,postman/postwoman,4412.2,441,0.3478,8,15,23,0.6522,0.47824,0.582592,Good,4
+441,postman/postwoman,4412.2,bicycle courier,9331.1,933,0.5909,13,9,22,0.4091,0.47272,0.578176,Good,5
+511,steward/stewardess,5111.2,ship steward/ship stewardess,5111.2.2,511,0.9778,44,1,45,0.0222,0.98224,0.985792,Excellent,1
+511,steward/stewardess,5111.2,flight attendant,5111.2.1,511,0.975,39,1,40,0.025,0.98,0.984,Excellent,2
+511,flight attendant,5111.2.1,cabin crew manager,5111.1,511,0.9677,30,1,31,0.0323,0.97416,0.979328,Excellent,3
+511,steward/stewardess,5111.2,cabin crew manager,5111.1,511,0.9677,30,1,31,0.0323,0.97416,0.979328,Excellent,4
+511,tourist guide,5113.1,park guide,5113.1.2,511,0.8868,47,6,53,0.1132,0.90944,0.9275520000000002,Excellent,5
+512,cook,5120.1,diet cook,5120.1.1,512,1.0,44,0,44,0.0,1.0,1.0,Excellent,1
+512,cook,5120.1,fish cook,5120.1.2,512,1.0,34,0,34,0.0,1.0,1.0,Excellent,2
+512,cook,5120.1,grill cook,5120.1.3,512,1.0,33,0,33,0.0,1.0,1.0,Excellent,3
+512,diet cook,5120.1.1,grill cook,5120.1.3,512,1.0,33,0,33,0.0,1.0,1.0,Excellent,4
+512,diet cook,5120.1.1,fish cook,5120.1.2,512,0.9118,31,3,34,0.0882,0.92944,0.9435520000000002,Excellent,5
+513,head sommelier,5131.2.2.2,sommelier,5131.2.2,513,0.9412,16,1,17,0.0588,0.95296,0.8998680000000001,Excellent,1
+513,bartender,5132.1,cocktail bartender,5132.1.2,513,0.7714,27,8,35,0.2286,0.8171200000000001,0.791196,Excellent,2
+513,waiter/waitress,5131.2,restaurant host/restaurant hostess,5131.1,513,0.75,15,5,20,0.25,0.8,0.7775000000000001,Excellent,3
+513,cocktail bartender,5132.1.2,bartender,5132.1,513,0.7105,27,11,38,0.2895,0.7684,0.7522200000000001,Excellent,4
+513,sommelier,5131.2.2,head sommelier,5131.2.2.2,513,0.5714,16,12,28,0.4286,0.65712,0.6631960000000001,Good,5
+514,pedicurist,5142.8,manicurist,5142.6,514,0.9429,33,2,35,0.0571,0.95432,0.963456,Excellent,1
+514,manicurist,5142.6,pedicurist,5142.8,514,0.8684,33,5,38,0.1316,0.89472,0.915776,Excellent,2
+514,hairdresser,5141.1,barber,5141.1.1,514,0.8235,28,6,34,0.1765,0.8588,0.88704,Excellent,3
+514,hairdresser,5141.1,hairdresser assistant,5141.1.2,514,0.8214,23,5,28,0.1786,0.8571200000000001,0.885696,Excellent,4
+514,make-up and hair designer,5142.4,performance hairdresser,5141.1.4,514,0.8077,21,5,26,0.1923,0.84616,0.8769280000000002,Excellent,5
+515,domestic housekeeper,5152.2,domestic butler,5152.2.1,515,0.5278,19,17,36,0.4722,0.6222400000000001,0.6977920000000002,Good,1
+515,hotel butler,5151.1,hotel porter,9621.2,962,0.7368,14,5,19,0.2632,0.5894400000000001,0.6715520000000001,Good,2
+515,bed and breakfast operator,5152.1,hotel butler,5151.1,515,0.4211,8,11,19,0.5789,0.53688,0.6295040000000001,Good,3
+515,hotel butler,5151.1,doorman/doorwoman,9621.1,962,0.6429,9,5,14,0.3571,0.51432,0.611456,Good,4
+515,domestic housekeeper,5152.2,domestic cleaner,9111.1,911,0.6286,22,13,35,0.3714,0.5028800000000001,0.6023040000000002,Good,5
+516,animal trainer,5164.2.1,dog trainer,5164.2.1.1,516,1.0,36,0,36,0.0,1.0,0.9625,Excellent,1
+516,animal trainer,5164.2.1,horse trainer,5164.2.1.2,516,1.0,38,0,38,0.0,1.0,0.9625,Excellent,2
+516,driving instructor,5165.1,bus driving instructor,5165.1.1,516,1.0,41,0,41,0.0,1.0,0.9625,Excellent,3
+516,driving instructor,5165.1,car driving instructor,5165.1.2,516,1.0,41,0,41,0.0,1.0,0.9625,Excellent,4
+516,driving instructor,5165.1,motorcycle instructor,5165.1.3,516,1.0,43,0,43,0.0,1.0,0.9625,Excellent,5
+521,market vendor,5211.1,hawker,9520.1,952,0.7321,41,15,56,0.2679,0.58568,0.631044,Good,1
+521,market vendor,5211.1,street food vendor,5212.1,521,0.4571,16,19,35,0.5429,0.56568,0.615044,Good,2
+521,street food vendor,5212.1,market vendor,5211.1,521,0.3721,16,27,43,0.6279,0.49768,0.560644,Good,3
+521,market vendor,5211.1,door to door seller,5243.1,524,0.3793,11,18,29,0.6207,0.30344,0.405252,Moderate,4
+521,street food vendor,5212.1,door to door seller,5243.1,524,0.3103,9,20,29,0.6897,0.24824,0.3610919999999999,Moderate,5
+522,fish and seafood specialised seller,5223.7.16,delicatessen specialised seller,5223.7.13,522,0.9375,30,2,32,0.0625,0.95,0.96,Excellent,1
+522,meat and meat products specialised seller,5223.7.23,delicatessen specialised seller,5223.7.13,522,0.9375,30,2,32,0.0625,0.95,0.96,Excellent,2
+522,bakery specialised seller,5223.7.4,delicatessen specialised seller,5223.7.13,522,0.9062,29,3,32,0.0938,0.92496,0.939968,Excellent,3
+522,confectionery specialised seller,5223.7.11,delicatessen specialised seller,5223.7.13,522,0.9062,29,3,32,0.0938,0.92496,0.939968,Excellent,4
+522,specialised seller,5223.7,ammunition specialised seller,5223.7.1,522,0.9062,29,3,32,0.0938,0.92496,0.939968,Excellent,5
+523,ticket issuing clerk,5230.3,press and stationery specialised seller,5223.7.29,522,0.8667,26,4,30,0.1333,0.6933600000000001,0.754688,Excellent,1
+523,ticket issuing clerk,5230.3,medical goods specialised seller,5223.7.24,522,0.8387,26,5,31,0.1613,0.67096,0.7367680000000001,Excellent,2
+523,ticket issuing clerk,5230.3,second-hand goods specialised seller,5223.7.30,522,0.8387,26,5,31,0.1613,0.67096,0.7367680000000001,Excellent,3
+523,ticket issuing clerk,5230.3,ammunition specialised seller,5223.7.1,522,0.8125,26,6,32,0.1875,0.65,0.72,Excellent,4
+523,ticket issuing clerk,5230.3,delicatessen specialised seller,5223.7.13,522,0.8125,26,6,32,0.1875,0.65,0.72,Excellent,5
+524,rental service representative,5249.2,"rental service representative in other machinery, equipment and tangible goods",5249.2.1,524,1.0,22,0,22,0.0,1.0,1.0,Excellent,1
+524,rental service representative,5249.2,rental service representative in agricultural machinery and equipment,5249.2.1.1,524,1.0,23,0,23,0.0,1.0,1.0,Excellent,2
+524,rental service representative,5249.2,rental service representative in air transport equipment,5249.2.1.2,524,1.0,26,0,26,0.0,1.0,1.0,Excellent,3
+524,rental service representative,5249.2,rental service representative in cars and light motor vehicles,5249.2.1.3,524,1.0,22,0,22,0.0,1.0,1.0,Excellent,4
+524,rental service representative,5249.2,rental service representative in construction and civil engineering machinery,5249.2.1.4,524,1.0,23,0,23,0.0,1.0,1.0,Excellent,5
+531,nanny,5311.1.4,au pair,5311.1.1,531,0.9706,33,1,34,0.0294,0.97648,0.981184,Excellent,1
+531,au pair,5311.1.1,nanny,5311.1.4,531,0.9167,33,3,36,0.0833,0.93336,0.946688,Excellent,2
+531,primary school teaching assistant,5312.2,early years teaching assistant,5312.1,531,0.9143,32,3,35,0.0857,0.93144,0.945152,Excellent,3
+531,au pair,5311.1.1,babysitter,5311.1.2,531,0.8966,26,3,29,0.1034,0.91728,0.933824,Excellent,4
+531,nanny,5311.1.4,babysitter,5311.1.2,531,0.8966,26,3,29,0.1034,0.91728,0.933824,Excellent,5
+532,nurse assistant,5321.1.1,healthcare assistant,5321.1,532,0.5217,24,22,46,0.4783,0.6173600000000001,0.6688880000000001,Good,1
+532,home care aide,5322.1,companion,5162.1,516,0.75,21,7,28,0.25,0.6000000000000001,0.6550000000000001,Good,2
+532,healthcare assistant,5321.1,nurse assistant,5321.1.1,532,0.4,24,36,60,0.6,0.52,0.5910000000000001,Good,3
+532,healthcare assistant,5321.1,physiotherapy assistant,3255.2,325,0.561,23,18,41,0.439,0.4488000000000001,0.5340400000000001,Good,4
+532,healthcare assistant,5321.1,dental hygienist,2261.3,226,0.5556,20,16,36,0.4444,0.44448,0.5305840000000001,Good,5
+541,firefighter,5411.1,industrial firefighter,5411.1.1,541,1.0,32,0,32,0.0,1.0,1.0,Excellent,1
+541,firefighter,5411.1,marine firefighter,5411.1.2,541,1.0,36,0,36,0.0,1.0,1.0,Excellent,2
+541,civil enforcement officer,5419.2,crossing guard,5419.4,541,0.96,24,1,25,0.04,0.968,0.9744,Excellent,3
+541,police officer,5412.1,street warden,5419.8,541,0.8571,24,4,28,0.1429,0.88568,0.908544,Excellent,4
+541,prison officer,5413.2,juvenile correctional officer,5413.1,541,0.8462,22,4,26,0.1538,0.87696,0.901568,Excellent,5
+611,crop production manager,6114.1,agronomic crop production team leader,6111.1,611,1.0,56,0,56,0.0,1.0,1.0,Excellent,1
+611,horticulture production team leader,6113.3,horticulture production manager,6113.2,611,0.9512,78,4,82,0.0488,0.96096,0.968768,Excellent,2
+611,agronomic crop production team leader,6111.1,crop production manager,6114.1,611,0.9333,56,4,60,0.0667,0.94664,0.9573120000000002,Excellent,3
+611,horticulture production manager,6113.2,horticulture production team leader,6113.3,611,0.8864,78,10,88,0.1136,0.90912,0.927296,Excellent,4
+611,horticulture production team leader,6113.3,fruit production team leader,6112.2,611,0.8611,62,10,72,0.1389,0.8888800000000001,0.911104,Excellent,5
+612,cattle breeder,6121.1,sheep breeder,6121.5,612,0.9545,42,2,44,0.0455,0.9636,0.97088,Excellent,1
+612,horse breeder,6121.3,pig breeder,6121.4,612,0.9535,41,2,43,0.0465,0.9628,0.97024,Excellent,2
+612,cattle breeder,6121.1,bee breeder,6123.1,612,0.9487,37,2,39,0.0513,0.95896,0.967168,Excellent,3
+612,fur animals breeder,6129.1,bee breeder,6123.1,612,0.9487,37,2,39,0.0513,0.95896,0.967168,Excellent,4
+612,horse breeder,6121.3,bee breeder,6123.1,612,0.9487,37,2,39,0.0513,0.95896,0.967168,Excellent,5
+613,farm manager,6130.1,mixed farmer,6130.2,613,0.3636,12,21,33,0.6364,0.49088,0.592704,Good,1
+613,mixed farmer,6130.2,farm manager,6130.1,613,0.3243,12,25,37,0.6757,0.45944,0.5675520000000001,Good,2
+621,forest ranger,6210.1,forest worker,9215.1,921,0.3889,14,22,36,0.6111,0.31112,0.386396,Moderate,1
+621,forest ranger,6210.1,forestry inspector,3359.4,335,0.3103,9,20,29,0.6897,0.24824,0.336092,Moderate,2
+622,fisheries boatman,6222.1,fisheries boatmaster,6223.2.1,622,0.8696,60,9,69,0.1304,0.89568,0.879044,Excellent,1
+622,fisheries boatman,6222.1,fisheries master,6223.2,622,0.8571,48,8,56,0.1429,0.88568,0.871044,Excellent,2
+622,fisheries boatmaster,6223.2.1,fisheries boatman,6222.1,622,0.8451,60,11,71,0.1549,0.87608,0.863364,Excellent,3
+622,fisheries boatmaster,6223.2.1,fisheries master,6223.2,622,0.8393,47,9,56,0.1607,0.87144,0.859652,Excellent,4
+622,fisheries boatman,6222.1,fisheries assistant engineer,7233.3,723,0.95,19,1,20,0.05,0.76,0.7705000000000001,Excellent,5
+711,window installer,7115.6,door installer,7115.2,711,0.9118,31,3,34,0.0882,0.92944,0.8810520000000002,Excellent,1
+711,door installer,7115.2,window installer,7115.6,711,0.775,31,9,40,0.225,0.8200000000000001,0.7935000000000001,Excellent,2
+711,carpenter,7115.1,staircase installer,7115.5,711,0.6875,33,15,48,0.3125,0.75,0.7375,Excellent,3
+711,staircase installer,7115.5,carpenter,7115.1,711,0.6,33,22,55,0.4,0.6799999999999999,0.6815,Good,4
+711,bricklayer,7112.1,stonemason,7113.1,711,0.5714,28,21,49,0.4286,0.65712,0.6631960000000001,Good,5
+712,carpet fitter,7122.1,resilient floor layer,7122.3,712,0.75,24,8,32,0.25,0.8,0.8025000000000001,Excellent,1
+712,resilient floor layer,7122.3,carpet fitter,7122.1,712,0.7273,24,9,33,0.2727,0.7818400000000001,0.7879720000000001,Excellent,2
+712,water network operative,7126.14,sewerage network operative,7126.10,712,0.6757,25,12,37,0.3243,0.7405600000000001,0.7549480000000001,Excellent,3
+712,sewerage network operative,7126.10,water network operative,7126.14,712,0.6579,25,13,38,0.3421,0.7263200000000001,0.7435560000000001,Excellent,4
+712,plasterer,7123.2,resilient floor layer,7122.3,712,0.6562,21,11,32,0.3438,0.72496,0.742468,Excellent,5
+713,decontamination worker,7133.5,asbestos abatement worker,7133.1,713,0.8214,23,5,28,0.1786,0.8571200000000001,0.823196,Excellent,1
+713,surface treatment operator,7132.2,lacquer spray gun operator,7132.1,713,0.8,32,8,40,0.2,0.8400000000000001,0.8095000000000001,Excellent,2
+713,asbestos abatement worker,7133.1,decontamination worker,7133.5,713,0.7419,23,8,31,0.2581,0.79352,0.772316,Excellent,3
+713,construction painter,7131.1,paperhanger,7131.3,713,0.7143,25,10,35,0.2857,0.7714400000000001,0.7546520000000001,Excellent,4
+713,chimney sweep,7133.3,chimney sweep supervisor,7133.4,713,0.6452,20,11,31,0.3548,0.7161600000000001,0.7104280000000001,Excellent,5
+721,brazier,7212.1,solderer,7212.2,721,0.9783,45,1,46,0.0217,0.98264,0.973612,Excellent,1
+721,high rigger,7215.2.3,ground rigger,7215.2.2,721,0.9667,29,1,30,0.0333,0.97336,0.966188,Excellent,2
+721,solderer,7212.2,brazier,7212.1,721,0.9574,45,2,47,0.0426,0.96592,0.960236,Excellent,3
+721,laser beam welder,7212.3.2,electron beam welder,7212.3.1,721,0.8462,44,8,52,0.1538,0.87696,0.889068,Excellent,4
+721,electron beam welder,7212.3.1,laser beam welder,7212.3.2,721,0.8302,44,9,53,0.1698,0.86416,0.878828,Excellent,5
+722,computer numerical control machine operator,7223.4,metal sawing machine operator,7223.4.5,722,1.0,53,0,53,0.0,1.0,0.9375,Excellent,1
+722,computer numerical control machine operator,7223.4,punch press operator,7223.4.7,722,1.0,50,0,50,0.0,1.0,0.9375,Excellent,2
+722,computer numerical control machine operator,7223.4,plasma cutting machine operator,7223.16,722,0.9545,42,2,44,0.0455,0.9636,0.90838,Excellent,3
+722,lathe and turning machine operator,7223.4.4,milling machine operator,7223.4.6,722,0.95,57,3,60,0.05,0.96,0.9055,Excellent,4
+722,computer numerical control machine operator,7223.4,laser marking machine operator,7223.10,722,0.9474,36,2,38,0.0526,0.95792,0.903836,Excellent,5
+723,fluid power technician,7233.4,pneumatic systems technician,7233.13,723,0.8966,26,3,29,0.1034,0.91728,0.933824,Excellent,1
+723,pneumatic systems technician,7233.13,fluid power technician,7233.4,723,0.8387,26,5,31,0.1613,0.87096,0.896768,Excellent,2
+723,forge equipment technician,7233.5,moulding machine technician,7233.12,723,0.8286,29,6,35,0.1714,0.8628800000000001,0.8903040000000002,Excellent,3
+723,aircraft maintenance technician,7232.5,aircraft engine specialist,7232.2,723,0.8125,26,6,32,0.1875,0.8500000000000001,0.8800000000000001,Excellent,4
+723,industrial machinery mechanic,7233.7,fluid power technician,7233.4,723,0.8065,25,6,31,0.1935,0.8452,0.87616,Excellent,5
+731,goldsmith,7313.1.2,silversmith,7313.1.8,731,1.0,38,0,38,0.0,1.0,1.0,Excellent,1
+731,keyboard musical instrument maker,7312.3,organ builder,7312.3.2,731,1.0,43,0,43,0.0,1.0,1.0,Excellent,2
+731,stringed musical instrument maker,7312.6,guitar maker,7312.6.1,731,1.0,43,0,43,0.0,1.0,1.0,Excellent,3
+731,stringed musical instrument maker,7312.6,harp maker,7312.6.2,731,1.0,38,0,38,0.0,1.0,1.0,Excellent,4
+731,stringed musical instrument maker,7312.6,violin maker,7312.6.3,731,1.0,42,0,42,0.0,1.0,1.0,Excellent,5
+732,bindery operator,7323.1,book-sewing machine operator,7323.2,732,0.8438,27,5,32,0.1562,0.87504,0.9000320000000002,Excellent,1
+732,offset printer,7322.5,flexographic press operator,7322.2,732,0.7895,30,8,38,0.2105,0.8316000000000001,0.86528,Excellent,2
+732,flexographic press operator,7322.2,gravure press operator,7322.3,732,0.7632,29,9,38,0.2368,0.81056,0.8484480000000001,Excellent,3
+732,gravure press operator,7322.3,flexographic press operator,7322.2,732,0.7632,29,9,38,0.2368,0.81056,0.8484480000000001,Excellent,4
+732,offset printer,7322.5,gravure press operator,7322.3,732,0.7632,29,9,38,0.2368,0.81056,0.8484480000000001,Excellent,5
+741,electricity distribution technician,7413.1,overhead line worker,7413.1.2,741,0.9565,22,1,23,0.0435,0.9652,0.97216,Excellent,1
+741,electricity distribution technician,7413.1,cable jointer,7413.1.1,741,0.9545,21,1,22,0.0455,0.9636,0.97088,Excellent,2
+741,overhead line worker,7413.1.2,cable jointer,7413.1.1,741,0.9545,21,1,22,0.0455,0.9636,0.97088,Excellent,3
+741,cable jointer,7413.1.1,overhead line worker,7413.1.2,741,0.913,21,2,23,0.087,0.9304,0.94432,Excellent,4
+741,electrician,7411.1,building electrician,7411.1.1,741,0.875,42,6,48,0.125,0.9000000000000001,0.9200000000000002,Excellent,5
+742,office equipment repair technician,7421.5,consumer electronics repair technician,7421.3,742,0.8,28,7,35,0.2,0.8400000000000001,0.8345000000000001,Excellent,1
+742,computer hardware repair technician,7422.2,consumer electronics repair technician,7421.3,742,0.7714,27,8,35,0.2286,0.8171200000000001,0.816196,Excellent,2
+742,mobile phone repair technician,7422.3.1,consumer electronics repair technician,7421.3,742,0.7714,27,8,35,0.2286,0.8171200000000001,0.816196,Excellent,3
+742,telecommunications technician,7422.7,communication infrastructure maintainer,7422.1,742,0.7308,19,7,26,0.2692,0.78464,0.790212,Excellent,4
+742,computer hardware repair technician,7422.2,office equipment repair technician,7421.5,742,0.725,29,11,40,0.275,0.78,0.7865000000000001,Excellent,5
+751,butcher,7511.1,halal butcher,7511.1.1,751,0.9583,46,2,48,0.0417,0.9666400000000002,0.9733120000000002,Excellent,1
+751,butcher,7511.1,kosher butcher,7511.1.2,751,0.9545,42,2,44,0.0455,0.9636,0.97088,Excellent,2
+751,halal slaughterer,7511.6.1,kosher slaughterer,7511.6.2,751,0.9535,41,2,43,0.0465,0.9628,0.97024,Excellent,3
+751,slaughterer,7511.6,halal slaughterer,7511.6.1,751,0.9333,42,3,45,0.0667,0.94664,0.9573120000000002,Excellent,4
+751,halal butcher,7511.1.1,kosher butcher,7511.1.2,751,0.9318,41,3,44,0.0682,0.94544,0.956352,Excellent,5
+752,wood pallet maker,7523.4,nailing machine operator,7523.1,752,0.9583,23,1,24,0.0417,0.9666400000000002,0.9108120000000002,Excellent,1
+752,antique furniture reproducer,7522.1,furniture restorer,7522.6,752,0.8462,33,6,39,0.1538,0.87696,0.8390679999999999,Excellent,2
+752,wood boring machine operator,7523.2,nailing machine operator,7523.1,752,0.7917,19,5,24,0.2083,0.8333600000000001,0.8041880000000001,Excellent,3
+752,furniture restorer,7522.6,antique furniture reproducer,7522.1,752,0.7674,33,10,43,0.2326,0.81392,0.7886360000000001,Excellent,4
+752,woodturner,7523.6,wood sander,7523.5,752,0.6829,28,13,41,0.3171,0.7463200000000001,0.7345560000000002,Excellent,5
+753,tailor,7531.5,embroiderer,7533.2,753,1.0,9,0,9,0.0,1.0,1.0,Excellent,1
+753,footwear CAD patternmaker,7536.2.3,footwear patternmaker,7536.2.5,753,0.9545,21,1,22,0.0455,0.9636,0.97088,Excellent,2
+753,clothing product grader,7532.3,clothing cutter,7532.2,753,0.9333,14,1,15,0.0667,0.94664,0.9573120000000002,Excellent,3
+753,aircraft interior technician,7534.1,marine upholsterer,7534.3.2,753,0.9167,33,3,36,0.0833,0.93336,0.946688,Excellent,4
+753,tailor,7531.5,milliner,7531.4,753,0.9167,11,1,12,0.0833,0.93336,0.946688,Excellent,5
+754,printed circuit board test technician,7543.6,automated optical inspection operator,7543.1,754,0.9143,32,3,35,0.0857,0.93144,0.870152,Excellent,1
+754,lumber grader,7543.8.2,engineered wood board grader,7543.8.1,754,0.8947,34,4,38,0.1053,0.91576,0.857608,Excellent,2
+754,lumber grader,7543.8.2,veneer grader,7543.11,754,0.8889,24,3,27,0.1111,0.9111200000000002,0.8538960000000002,Excellent,3
+754,product quality inspector,7543.10,product quality controller,7543.9,754,0.8846,23,3,26,0.1154,0.90768,0.8511440000000001,Excellent,4
+754,pulp grader,7543.8.3,engineered wood board grader,7543.8.1,754,0.8684,33,5,38,0.1316,0.89472,0.840776,Excellent,5
+811,underground heavy equipment operator,8111.4,underground miner,8111.5,811,0.8571,12,2,14,0.1429,0.88568,0.908544,Excellent,1
+811,surface miner,8111.3,underground miner,8111.5,811,0.7857,11,3,14,0.2143,0.82856,0.8628480000000001,Excellent,2
+811,underground miner,8111.5,surface miner,8111.3,811,0.7857,11,3,14,0.2143,0.82856,0.8628480000000001,Excellent,3
+811,stone planer,8112.4,stone splitter,8114.8,811,0.697,23,10,33,0.303,0.7576,0.8060800000000001,Excellent,4
+811,stone polisher,8114.7,stone planer,8112.4,811,0.6842,26,12,38,0.3158,0.74736,0.7978880000000002,Excellent,5
+812,cylindrical grinder operator,8122.4,surface grinding machine operator,8122.11,812,0.8776,43,6,49,0.1224,0.90208,0.859164,Excellent,1
+812,deburring machine operator,8122.5,surface grinding machine operator,8122.11,812,0.8571,42,7,49,0.1429,0.88568,0.846044,Excellent,2
+812,surface grinding machine operator,8122.11,cylindrical grinder operator,8122.4,812,0.8269,43,9,52,0.1731,0.8615200000000001,0.826716,Excellent,3
+812,surface grinding machine operator,8122.11,deburring machine operator,8122.5,812,0.8235,42,9,51,0.1765,0.8588,0.82454,Excellent,4
+812,cylindrical grinder operator,8122.4,deburring machine operator,8122.5,812,0.8039,41,10,51,0.1961,0.8431200000000001,0.8119960000000002,Excellent,5
+813,varnish maker,8131.2.6,lacquer maker,8131.2.2,813,0.8438,27,5,32,0.1562,0.87504,0.8375320000000002,Excellent,1
+813,cosmetics production machine operator,8131.4,perfume production machine operator,8131.16,813,0.8077,21,5,26,0.1923,0.84616,0.8144280000000002,Excellent,2
+813,lacquer maker,8131.2.2,varnish maker,8131.2.6,813,0.7941,27,7,34,0.2059,0.83528,0.8057240000000001,Excellent,3
+813,photographic developer,8132.2,motion picture film developer,8132.1,813,0.7857,22,6,28,0.2143,0.82856,0.8003480000000001,Excellent,4
+813,perfume production machine operator,8131.16,cosmetics production machine operator,8131.4,813,0.7778,21,6,27,0.2222,0.8222400000000001,0.7952920000000001,Excellent,5
+814,injection moulding operator,8142.7,blow moulding machine operator,8142.1,814,0.8485,28,5,33,0.1515,0.8788,0.8405400000000001,Excellent,1
+814,filament winding operator,8142.6,pultrusion machine operator,8142.12,814,0.8276,24,5,29,0.1724,0.86208,0.827164,Excellent,2
+814,corrugator operator,8143.2,paperboard products assembler,8143.5,814,0.8182,27,6,33,0.1818,0.85456,0.821148,Excellent,3
+814,cake press operator,8142.2,plastic rolling machine operator,8142.11,814,0.7857,22,6,28,0.2143,0.82856,0.8003480000000001,Excellent,4
+814,pultrusion machine operator,8142.12,filament winding operator,8142.6,814,0.7742,24,7,31,0.2258,0.8193600000000001,0.792988,Excellent,5
+815,colour sampling operator,8155.1.1,leather finishing operator,8155.1.2,815,0.9583,23,1,24,0.0417,0.9666400000000002,0.9733120000000002,Excellent,1
+815,lasting machine operator,8156.2.4,sole and heel operator,8156.2.6,815,0.9444,17,1,18,0.0556,0.95552,0.9644160000000002,Excellent,2
+815,colour sampling operator,8155.1.1,leather production machine operator,8155.1,815,0.9375,15,1,16,0.0625,0.95,0.96,Excellent,3
+815,leather finishing operator,8155.1.2,leather production machine operator,8155.1,815,0.9375,15,1,16,0.0625,0.95,0.96,Excellent,4
+815,knitting machine operator,8152.1,knitting machine supervisor,8152.1.1,815,0.9286,13,1,14,0.0714,0.94288,0.954304,Excellent,5
+816,distillery worker,8160.27,yeast distiller,8160.55,816,0.7826,18,5,23,0.2174,0.8260799999999999,0.7983640000000001,Excellent,1
+816,liquor blender,8160.41,yeast distiller,8160.55,816,0.7826,18,5,23,0.2174,0.8260799999999999,0.7983640000000001,Excellent,2
+816,dairy processing operator,8160.24,milk heat treatment process operator,8160.44,816,0.775,31,9,40,0.225,0.8200000000000001,0.7935000000000001,Excellent,3
+816,fish production operator,8160.32,fish canning operator,8160.31,816,0.775,31,9,40,0.225,0.8200000000000001,0.7935000000000001,Excellent,4
+816,distillery miller,8160.26,distillery worker,8160.27,816,0.76,19,6,25,0.24,0.808,0.7839,Excellent,5
+817,wash deinking operator,8171.9,froth flotation deinking operator,8171.3,817,1.0,36,0,36,0.0,1.0,0.9,Excellent,1
+817,froth flotation deinking operator,8171.3,wash deinking operator,8171.9,817,0.973,36,1,37,0.027,0.9784,0.8827200000000001,Excellent,2
+817,table saw operator,8172.5.3,band saw operator,8172.5.1,817,0.9556,43,2,45,0.0444,0.96448,0.871584,Excellent,3
+817,band saw operator,8172.5.1,table saw operator,8172.5.3,817,0.8958,43,5,48,0.1042,0.91664,0.833312,Excellent,4
+817,table saw operator,8172.5.3,wood router operator,8172.5.5,817,0.8696,40,6,46,0.1304,0.89568,0.816544,Excellent,5
+818,clay kiln burner,8181.3,kiln firer,8181.10,818,0.75,12,4,16,0.25,0.8,0.8400000000000001,Excellent,1
+818,glass forming machine operator,8181.8,glass annealer,8181.7,818,0.6389,23,13,36,0.3611,0.71112,0.768896,Excellent,2
+818,slitter operator,8189.2,heat sealing machine operator,8183.5,818,0.6,18,12,30,0.4,0.6799999999999999,0.744,Excellent,3
+818,heat sealing machine operator,8183.5,edge bander operator,8189.1,818,0.5862,17,12,29,0.4138,0.66896,0.735168,Excellent,4
+818,slitter operator,8189.2,edge bander operator,8189.1,818,0.5862,17,12,29,0.4138,0.66896,0.735168,Excellent,5
+821,motor vehicle engine assembler,8211.5.2,aircraft engine assembler,8211.1.1,821,0.9388,46,3,49,0.0612,0.95104,0.923332,Excellent,1
+821,aircraft engine assembler,8211.1.1,motor vehicle engine assembler,8211.5.2,821,0.92,46,4,50,0.08,0.9360000000000002,0.9113,Excellent,2
+821,motorcycle assembler,8211.4,bicycle assembler,8219.2,821,0.9032,28,3,31,0.0968,0.92256,0.900548,Excellent,3
+821,motor vehicle assembler,8211.5,motor vehicle parts assembler,8211.5.3,821,0.9,36,4,40,0.1,0.9200000000000002,0.8985000000000002,Excellent,4
+821,vessel engine assembler,8211.7,aircraft engine assembler,8211.1.1,821,0.8776,43,6,49,0.1224,0.90208,0.8841640000000001,Excellent,5
+831,level crossing signalperson,8312.1,rail switchperson,8312.2,831,0.4762,10,11,21,0.5238,0.58096,0.664768,Good,1
+831,rail switchperson,8312.2,level crossing signalperson,8312.1,831,0.3571,10,18,28,0.6429,0.48568,0.588544,Good,2
+831,shunter,8312.3,rail switchperson,8312.2,831,0.3333,7,14,21,0.6667,0.46664,0.573312,Good,3
+831,train driver,8311.1,train dispatcher,8312.4,831,0.3333,6,12,18,0.6667,0.46664,0.573312,Good,4
+831,shunter,8312.3,railway electronic technician,7421.6,742,0.3462,9,17,26,0.6538,0.27696,0.421568,Moderate,5
+832,car and van delivery driver,8322.2,motorcycle delivery person,8321.1,832,0.963,26,1,27,0.037,0.9704,0.97632,Excellent,1
+832,motorcycle delivery person,8321.1,car and van delivery driver,8322.2,832,0.7647,26,8,34,0.2353,0.81176,0.8494080000000002,Excellent,2
+832,car and van delivery driver,8322.2,bicycle courier,9331.1,933,0.9545,21,1,22,0.0455,0.7636000000000001,0.81088,Excellent,3
+832,private chauffeur,8322.6,parking valet,8322.4,832,0.6552,19,10,29,0.3448,0.7241600000000001,0.7793280000000002,Excellent,4
+832,private chauffeur,8322.6,taxi driver,8322.7,832,0.6071,17,11,28,0.3929,0.6856800000000001,0.7485440000000001,Excellent,5
+833,tram driver,8331.2,trolley bus driver,8331.1.1,833,0.8857,31,4,35,0.1143,0.90856,0.8643480000000001,Excellent,1
+833,bus driver,8331.1,trolley bus driver,8331.1.1,833,0.8571,30,5,35,0.1429,0.88568,0.846044,Excellent,2
+833,trolley bus driver,8331.1.1,bus driver,8331.1,833,0.8333,30,6,36,0.1667,0.8666400000000001,0.8308120000000001,Excellent,3
+833,tram driver,8331.2,bus driver,8331.1,833,0.8056,29,7,36,0.1944,0.8444800000000001,0.8130840000000001,Excellent,4
+833,trolley bus driver,8331.1.1,tram driver,8331.2,833,0.7949,31,8,39,0.2051,0.83592,0.806236,Excellent,5
+834,excavator operator,8342.3,grader operator,8342.4,834,1.0,31,0,31,0.0,1.0,0.9375,Excellent,1
+834,scraper operator,8342.8,grader operator,8342.4,834,1.0,31,0,31,0.0,1.0,0.9375,Excellent,2
+834,excavator operator,8342.3,scraper operator,8342.8,834,0.9714,34,1,35,0.0286,0.97712,0.919196,Excellent,3
+834,road roller operator,8342.7,grader operator,8342.4,834,0.9677,30,1,31,0.0323,0.97416,0.916828,Excellent,4
+834,excavator operator,8342.3,bulldozer operator,8342.1,834,0.9429,33,2,35,0.0571,0.95432,0.900956,Excellent,5
+835,matrose,8350.5,decksman,8350.2,835,0.9655,56,2,58,0.0345,0.9724000000000002,0.91542,Excellent,1
+835,decksman,8350.2,matrose,8350.5,835,0.7273,56,21,77,0.2727,0.7818400000000001,0.7629720000000002,Excellent,2
+835,fisheries deckhand,8350.4,boatswain,8350.1,835,0.6944,25,11,36,0.3056,0.75552,0.741916,Excellent,3
+835,matrose,8350.5,engine minder,8350.3,835,0.6364,21,12,33,0.3636,0.70912,0.704796,Excellent,4
+835,boatswain,8350.1,fishing net maker,7318.3,731,0.8,8,2,10,0.2,0.6400000000000001,0.6495000000000002,Good,5
+911,train cleaner,9112.6,toilet attendant,9112.5,911,0.6364,14,8,22,0.3636,0.70912,0.729796,Excellent,1
+911,building cleaner,9112.2,toilet attendant,9112.5,911,0.5909,13,9,22,0.4091,0.67272,0.700676,Excellent,2
+911,building cleaner,9112.2,train cleaner,9112.6,911,0.5,15,15,30,0.5,0.6000000000000001,0.6425000000000001,Good,3
+911,toilet attendant,9112.5,train cleaner,9112.6,911,0.4667,14,16,30,0.5333,0.5733600000000001,0.6211880000000001,Good,4
+911,domestic cleaner,9111.1,train cleaner,9112.6,911,0.4,12,18,30,0.6,0.52,0.5785,Good,5
+912,sewerage cleaner,9129.2,septic tank servicer,7126.9,712,0.5862,17,12,29,0.4138,0.46896,0.512668,Good,1
+912,wearing apparel presser,9121.2,sewing machinist,7533.5,753,0.5714,8,6,14,0.4286,0.45712,0.503196,Good,2
+912,window cleaner,9123.1,toilet attendant,9112.5,911,0.5455,12,10,22,0.4545,0.4364,0.48662,Moderate,3
+912,amusement park cleaner,9129.4,attraction operator,9629.3,962,0.5385,7,6,13,0.4615,0.4308,0.48214,Moderate,4
+912,drapery and carpet cleaner,9129.1,laundromat attendant,9629.5,962,0.5263,20,18,38,0.4737,0.42104,0.474332,Moderate,5
+921,groom,9212.3,equine worker,9212.2,921,0.9062,29,3,32,0.0938,0.92496,0.939968,Excellent,1
+921,equine worker,9212.2,groom,9212.3,921,0.7073,29,12,41,0.2927,0.7658400000000001,0.8126720000000001,Excellent,2
+921,horticulture worker,9214.2,crop production worker,9213.1,921,0.7021,33,14,47,0.2979,0.7616799999999999,0.8093440000000001,Excellent,3
+921,water-based aquaculture worker,9216.4,aquaculture harvesting worker,9216.2,921,0.625,25,15,40,0.375,0.7,0.76,Excellent,4
+921,crop production worker,9213.1,horticulture worker,9214.2,921,0.5323,33,29,62,0.4677,0.62584,0.700672,Excellent,5
+931,civil engineering worker,9312.1,rail layer,9312.1.2,931,0.619,26,16,42,0.381,0.6952,0.7561600000000002,Excellent,1
+931,mining assistant,9311.1,surface miner,8111.3,811,0.8571,12,2,14,0.1429,0.6856800000000001,0.7485440000000001,Excellent,2
+931,mining assistant,9311.1,underground miner,8111.5,811,0.8571,12,2,14,0.1429,0.6856800000000001,0.7485440000000001,Excellent,3
+931,civil engineering worker,9312.1,road maintenance worker,9312.1.3,931,0.5758,19,14,33,0.4242,0.66064,0.728512,Excellent,4
+931,civil engineering worker,9312.1,road sign installer,9312.1.5,931,0.56,14,11,25,0.44,0.6480000000000001,0.7184000000000001,Excellent,5
+932,clothing finisher,9321.1,embroiderer,7533.2,753,0.7778,7,2,9,0.2222,0.6222400000000001,0.6352920000000002,Good,1
+932,clothing finisher,9321.1,sewing machinist,7533.5,753,0.7143,10,4,14,0.2857,0.5714400000000001,0.5946520000000001,Good,2
+932,clothing finisher,9321.1,embroidery machine operator,8153.1.3,815,0.6154,8,5,13,0.3846,0.49232,0.5313559999999999,Good,3
+932,clothing finisher,9321.1,sewing machine operator,8153.1,815,0.6111,11,7,18,0.3889,0.48888,0.5286040000000001,Good,4
+932,clothing finisher,9321.1,milliner,7531.4,753,0.5833,7,5,12,0.4167,0.46664,0.510812,Good,5
+933,stevedore,9333.6,rail intermodal equipment operator,9333.5,933,0.6957,16,7,23,0.3043,0.7565600000000001,0.7427480000000002,Excellent,1
+933,warehouse worker,9333.8,materials handler,9333.3,933,0.575,23,17,40,0.425,0.6599999999999999,0.6655,Good,2
+933,warehouse worker,9333.8,warehouse order picker,9333.8.1,933,0.4839,15,16,31,0.5161,0.5871200000000001,0.6071960000000001,Good,3
+933,bicycle courier,9331.1,motorcycle delivery person,8321.1,832,0.6667,18,9,27,0.3333,0.53336,0.5641879999999999,Good,4
+933,rail intermodal equipment operator,9333.5,stevedore,9333.6,933,0.3721,16,27,43,0.6279,0.49768,0.535644,Good,5
+941,kitchen assistant,9412.1,kitchen porter,9412.2,941,0.8,12,3,15,0.2,0.8400000000000001,0.8095000000000001,Excellent,1
+941,kitchen assistant,9412.1,pizzaiolo,9411.1,941,0.55,11,9,20,0.45,0.6400000000000001,0.6495000000000002,Good,2
+941,pizzaiolo,9411.1,kitchen porter,9412.2,941,0.4,6,9,15,0.6,0.52,0.5535000000000001,Good,3
+941,kitchen porter,9412.2,kitchen assistant,9412.1,941,0.3871,12,19,31,0.6129,0.50968,0.5452440000000001,Good,4
+941,kitchen assistant,9412.1,quick service restaurant crew member,9411.2,941,0.375,9,15,24,0.625,0.5,0.5375000000000001,Good,5
+952,hawker,9520.1,market vendor,5211.1,521,0.9535,41,2,43,0.0465,0.7628,0.7477400000000001,Excellent,1
+952,hawker,9520.1,door to door seller,5243.1,524,0.5862,17,12,29,0.4138,0.46896,0.512668,Good,2
+952,hawker,9520.1,street food vendor,5212.1,521,0.4,14,21,35,0.6,0.32,0.3935,Moderate,3
+952,hawker,9520.1,promotions demonstrator,5242.1,524,0.3226,10,21,31,0.6774,0.25808,0.343964,Moderate,4
+961,recycling worker,9612.1,sorter labourer,9612.2,961,0.8889,24,3,27,0.1111,0.9111200000000002,0.9288960000000002,Excellent,1
+961,sorter labourer,9612.2,recycling worker,9612.1,961,0.7059,24,10,34,0.2941,0.7647200000000001,0.811776,Excellent,2
+961,recycling worker,9612.1,refuse collector,9611.1,961,0.68,17,8,25,0.32,0.744,0.7952000000000001,Excellent,3
+961,sorter labourer,9612.2,refuse collector,9611.1,961,0.6,15,10,25,0.4,0.6799999999999999,0.744,Excellent,4
+961,refuse collector,9611.1,sorter labourer,9612.2,961,0.5556,15,12,27,0.4444,0.6444799999999999,0.715584,Excellent,5
+962,hotel porter,9621.2,doorman/doorwoman,9621.1,962,0.8571,12,2,14,0.1429,0.88568,0.908544,Excellent,1
+962,cloak room attendant,9629.4,locker room attendant,9629.6,962,0.6667,14,7,21,0.3333,0.73336,0.786688,Excellent,2
+962,doorman/doorwoman,9621.1,hotel porter,9621.2,962,0.6316,12,7,19,0.3684,0.7052800000000001,0.7642240000000002,Excellent,3
+962,locker room attendant,9629.6,cloak room attendant,9629.4,962,0.56,14,11,25,0.44,0.6480000000000001,0.7184000000000001,Excellent,4
+962,amusement and recreation attendant,9629.2,attraction operator,9629.3,962,0.5385,7,6,13,0.4615,0.6308,0.7046400000000002,Excellent,5

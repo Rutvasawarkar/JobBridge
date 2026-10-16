@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobBridge — Smart Career Transition & Recruitment Platform</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast-container" aria-live="polite"></div>
+
+  <!-- ======================================================== -->
+  <!-- 1. AUTHENTICATION PAGE                                   -->
+  <!-- ======================================================== -->
+  <section id="authPage" class="auth-page">
+    <div class="auth-visual">
+      <div class="brand">Job<span class="brand-accent">Bridge</span></div>
+      <div class="hero-copy">
+        <div class="eyebrow">INTEGRATED CAREER & RECRUITMENT PLATFORM</div>
+        <h1>Bridge the gap between <span>your skills</span> and your next career.</h1>
+        <p>AI-assisted career-transition exploration, transparent readiness scoring, verified free courses, and direct recruiter matching.</p>
+        <div class="hero-pills">
+          <span>✓ Explainable Skill-Gap Analysis</span>
+          <span>✓ Verified Free Learning Pathways</span>
+          <span>✓ Transparent Career-Readiness</span>
+          <span>✓ Role-Based Recruitment</span>
+        </div>
+      </div>
+      <div class="visual-orb orb-one"></div>
+      <div class="visual-orb orb-two"></div>
+    </div>
+
+    <div class="auth-panel">
+      <div class="auth-box">
+        <div class="mobile-brand">Job<span>Bridge</span></div>
+        <div class="eyebrow" id="authEyebrow">PORTAL ACCESS</div>
+        <h2 id="authTitle">Welcome to JobBridge 👋</h2>
+        <p id="authSubtitle">Select your role to sign in or create an account.</p>
+
+        <!-- Role Selector -->
+        <div class="role-selector" role="tablist">
+          <button type="button" id="roleBtnCandidate" class="role-card active" onclick="setAuthRole('candidate')">
+            <span class="role-icon">👤</span>
+            <span><strong>Candidate</strong><small>Find transitions, learn & apply</small></span>
+          </button>
+          <button type="button" id="roleBtnRecruiter" class="role-card" onclick="setAuthRole('recruiter')">
+            <span class="role-icon">💼</span>
+            <span><strong>Recruiter</strong><small>Post jobs & hire verified talent</small></span>
+          </button>
+          <button type="button" id="roleBtnAdmin" class="role-card" onclick="setAuthRole('admin')">
+            <span class="role-icon">🛡️</span>
+            <span><strong>Admin</strong><small>Platform moderation & logs</small></span>
+          </button>
+        </div>
+
+        <form id="authForm" onsubmit="handleAuthSubmit(event)">
+          <div id="authNameGroup" class="field hidden">
+            <label for="authName">Full Name</label>
+            <input type="text" id="authName" placeholder="e.g. Alex Rivera" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="authEmail">Email Address</label>
+            <input type="email" id="authEmail" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="authPassword">Password</label>
+            <input type="password" id="authPassword" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+
+          <button type="submit" id="authSubmitBtn" class="btn primary full">
+            Sign In as Candidate
+          </button>
+        </form>
+
+        <div class="switch-text" id="switchContainer">
+          <span id="switchQuestion">Don't have an account?</span>
+          <button type="button" id="switchButton" class="link-btn" onclick="toggleAuthMode()">Register as Candidate</button>
+        </div>
+
+        <div class="demo-box">
+          <strong>College Demo Credentials:</strong>
+          <div>Candidate: <code>user@gmail.com</code> / <code>user123</code></div>
+          <div>Recruiter: <code>recruiter@gmail.com</code> / <code>recruiter123</code></div>
+          <div>Admin: <code>admin@jobbridge.local</code> / <code>admin123</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 2. CANDIDATE ONBOARDING WIZARD                          -->
+  <!-- ======================================================== -->
+  <section id="candidateOnboardingPage" class="onboarding-page hidden">
+    <div class="onboarding-container">
+      <div class="onboarding-header">
+        <div class="brand">Job<span class="brand-accent">Bridge</span></div>
+        <div class="step-progress-wrapper">
+          <div class="step-indicators">
+            <div class="step-node active" id="nodeStep1"><span>1</span><label>Personal</label></div>
+            <div class="step-line" id="line1"></div>
+            <div class="step-node" id="nodeStep2"><span>2</span><label>Education</label></div>
+            <div class="step-line" id="line2"></div>
+            <div class="step-node" id="nodeStep3"><span>3</span><label>Experience</label></div>
+            <div class="step-line" id="line3"></div>
+            <div class="step-node" id="nodeStep4"><span>4</span><label>Interests</label></div>
+            <div class="step-line" id="line4"></div>
+            <div class="step-node" id="nodeStep5"><span>5</span><label>Skills</label></div>
+            <div class="step-line" id="line5"></div>
+            <div class="step-node" id="nodeStep6"><span>6</span><label>Resume</label></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="onboarding-card card">
+        <!-- Step 1: Personal -->
+        <div id="onboardingStep1" class="onboarding-step">
+          <h2>Let's build your candidate profile 👤</h2>
+          <p class="subtitle">Complete these essential details so career transitions and job matching can work accurately.</p>
+          <div class="field-row">
+            <div class="field">
+              <label>Full Name *</label>
+              <input type="text" id="onbName" placeholder="Your full name">
+            </div>
+            <div class="field">
+              <label>Phone Number</label>
+              <input type="text" id="onbPhone" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="field">
+            <label>Location (City, Country) *</label>
+            <input type="text" id="onbLocation" placeholder="e.g. Nagpur, India">
+          </div>
+          <div class="onb-actions">
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(1)">Next: Education →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Education -->
+        <div id="onboardingStep2" class="onboarding-step hidden">
+          <h2>Education & Academic Background 🎓</h2>
+          <p class="subtitle">Enter your highest qualification or current degree.</p>
+          <div class="field">
+            <label>Degree / Qualification *</label>
+            <input type="text" id="onbEducation" placeholder="e.g. B.Tech in Computer Science, RCOEM">
+          </div>
+          <div class="onb-actions split">
+            <button type="button" class="btn secondary" onclick="goToOnboardingStep(1)">← Back</button>
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(2)">Next: Experience →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Experience -->
+        <div id="onboardingStep3" class="onboarding-step hidden">
+          <h2>Work Experience & Current Role 💼</h2>
+          <p class="subtitle">Tell us about your current occupation and total years of professional or project experience.</p>
+          <div class="field-row">
+            <div class="field">
+              <label>Current Occupation / Baseline Role *</label>
+              <input type="text" id="onbOccupation" list="occupationsList" placeholder="e.g. Junior Data Analyst, Student">
+              <datalist id="occupationsList"></datalist>
+            </div>
+            <div class="field">
+              <label>Years of Experience *</label>
+              <input type="number" id="onbExperience" min="0" max="50" value="0">
+            </div>
+          </div>
+          <div class="onb-actions split">
+            <button type="button" class="btn secondary" onclick="goToOnboardingStep(2)">← Back</button>
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(3)">Next: Career Interests →</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Interests -->
+        <div id="onboardingStep4" class="onboarding-step hidden">
+          <h2>Career Interests & Target Role 🎯</h2>
+          <p class="subtitle">Which roles are you aiming to transition into?</p>
+          <div class="field">
+            <label>Target Role / Career Interest *</label>
+            <input type="text" id="onbTargetRole" placeholder="e.g. Data Scientist, ML Engineer, Product Analyst">
+          </div>
+          <div class="field">
+            <label>Professional Headline</label>
+            <input type="text" id="onbHeadline" placeholder="e.g. Aspiring Data Scientist | Python, SQL, Statistics">
+          </div>
+          <div class="field">
+            <label>Short Bio</label>
+            <textarea id="onbBio" rows="3" placeholder="Brief summary of your professional background, aspirations, and projects..."></textarea>
+          </div>
+          <div class="onb-actions split">
+            <button type="button" class="btn secondary" onclick="goToOnboardingStep(3)">← Back</button>
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(4)">Next: Skills →</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Skills -->
+        <div id="onboardingStep5" class="onboarding-step hidden">
+          <h2>Your Skills & Competencies 🛠️</h2>
+          <p class="subtitle">Add skills you know. You can specify your self-reported proficiency level.</p>
+          <div class="skill-input-wrapper">
+            <input type="text" id="skillNameInput" placeholder="Add a skill (e.g. Python, SQL, Excel)...">
+            <select id="skillProfInput">
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate" selected>Intermediate</option>
+              <option value="Advanced">Advanced</option>
+              <option value="Expert">Expert</option>
+            </select>
+            <button type="button" class="btn secondary" onclick="addSkillFromInput()">+ Add</button>
+          </div>
+          <div id="onboardingSkillsPills" class="skills-tag-cloud"></div>
+          <div class="onb-actions split">
+            <button type="button" class="btn secondary" onclick="goToOnboardingStep(4)">← Back</button>
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(5)">Next: Resume & Finish →</button>
+          </div>
+        </div>
+
+        <!-- Step 6: Resume & Complete -->
+        <div id="onboardingStep6" class="onboarding-step hidden">
+          <h2>Resume Upload & Profile Review 📄</h2>
+          <p class="subtitle">Upload your resume (PDF, DOCX, or TXT up to 5MB) or proceed to complete your setup.</p>
+          <div class="upload-dropzone" onclick="document.getElementById('onbResumeFile').click()">
+            <div class="drop-icon">📤</div>
+            <p><strong>Click to choose a resume file</strong> or drag & drop</p>
+            <small>Supports PDF, DOCX, TXT (Max 5 MB)</small>
+            <input type="file" id="onbResumeFile" accept=".pdf,.docx,.txt" style="display:none" onchange="handleResumeFileSelected(this)">
+          </div>
+          <div id="onbResumeStatus" class="file-status-pill hidden"></div>
+
+          <div class="onb-actions split">
+            <button type="button" class="btn secondary" onclick="goToOnboardingStep(5)">← Back</button>
+            <button type="button" class="btn primary" onclick="submitOnboardingStep(6)">Complete Profile & Launch Dashboard 🚀</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 3. CANDIDATE PORTAL                                      -->
+  <!-- ======================================================== -->
+  <section id="candidatePortal" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="side-logo">Job<span class="brand-accent">Bridge</span></div>
+      <div class="mini-profile">
+        <div class="avatar" id="candAvatar">AR</div>
+        <div>
+          <strong id="candSidebarName">Alex Rivera</strong>
+          <small>Candidate</small>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <button type="button" class="nav-btn active" onclick="showCandidateTab('dashboard', this)">
+          <span class="nav-icon">📊</span> <span>Dashboard</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('transitions', this)">
+          <span class="nav-icon">🔄</span> <span>Career Transitions</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('readiness', this)">
+          <span class="nav-icon">🎯</span> <span>Readiness Score</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('learning', this)">
+          <span class="nav-icon">📚</span> <span>Learning Pathways</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('jobs', this)">
+          <span class="nav-icon">💼</span> <span>Job Opportunities</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('applications', this)">
+          <span class="nav-icon">📝</span> <span>My Applications</span>
+          <em id="candAppBadge" class="badge-count">0</em>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('saved', this)">
+          <span class="nav-icon">❤️</span> <span>Saved Jobs</span>
+          <em id="candSavedBadge" class="badge-count">0</em>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('profile', this)">
+          <span class="nav-icon">👤</span> <span>Profile & Resume</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showCandidateTab('assistant', this)">
+          <span class="nav-icon">🤖</span> <span>AI Career Assistant</span>
+        </button>
+      </nav>
+
+      <button type="button" class="logout-btn" onclick="handleLogout()">
+        <span>↪</span> Sign Out
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">CANDIDATE PORTAL</div>
+          <h1 id="candPageTitle">Career Dashboard</h1>
+          <p id="candPageSubtitle">Track your profile, readiness, learning pathways, and active job matches.</p>
+        </div>
+        <div class="top-controls">
+          <div class="notif-wrapper" onclick="toggleNotificationsMenu()">
+            <button type="button" class="notif-btn" aria-label="Notifications">
+              🔔 <span id="notifBadge" class="notif-dot hidden"></span>
+            </button>
+            <div id="notifDropdown" class="notif-dropdown hidden">
+              <div class="notif-head">
+                <strong>Notifications</strong>
+                <button type="button" class="text-btn" onclick="markAllNotificationsRead(event)">Mark all read</button>
+              </div>
+              <div id="notifList" class="notif-list"></div>
+            </div>
+          </div>
+          <div class="top-user-info">
+            <div class="avatar small" id="candTopAvatar">AR</div>
+            <strong id="candTopName">Alex Rivera</strong>
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB 1: DASHBOARD -->
+      <section id="candTabDashboard" class="portal-tab">
+        <div class="metric-row">
+          <div class="metric-card">
+            <span>Profile Strength</span>
+            <strong id="dashProfileStrength">88%</strong>
+            <small class="pill-green">Good Profile</small>
+          </div>
+          <div class="metric-card">
+            <span>Career Readiness</span>
+            <strong id="dashReadinessScore">75.0%</strong>
+            <small id="dashReadinessBand">Role Ready</small>
+          </div>
+          <div class="metric-card">
+            <span>Active Applications</span>
+            <strong id="dashAppCount">1</strong>
+            <small>Tracked live</small>
+          </div>
+          <div class="metric-card">
+            <span>Saved Jobs</span>
+            <strong id="dashSavedCount">1</strong>
+            <small>Saved for review</small>
+          </div>
+        </div>
+
+        <div class="banner-card readiness-banner">
+          <div class="banner-content">
+            <div class="eyebrow">TARGET CAREER READINESS</div>
+            <h2 id="dashTargetRoleHeading">Ready for: Data Scientist</h2>
+            <p id="dashReadinessExplanation">Your profile matches 75.0% of standardized core requirements. Complete missing learning modules to reach the top candidate tier.</p>
+            <button type="button" class="btn primary" onclick="showCandidateTab('readiness')">View Readiness Breakdown →</button>
+          </div>
+          <div class="readiness-meter">
+            <div class="meter-circle" id="dashMeterCircle">
+              <span id="dashMeterPercent">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2>Recommended Jobs For You</h2>
+            <p>Ranked using explainable skill overlap and experience compatibility.</p>
+          </div>
+          <button type="button" class="btn secondary" onclick="showCandidateTab('jobs')">Explore All Jobs →</button>
+        </div>
+        <div id="dashRecommendedJobs" class="job-grid"></div>
+      </section>
+
+      <!-- TAB 2: TRANSITIONS & SKILL GAP -->
+      <section id="candTabTransitions" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Career Transitions & Skill-Gap Analysis</h2>
+            <p>Discover realistic career transitions based on standardized ESCO/NCO occupational overlaps.</p>
+          </div>
+        </div>
+
+        <div class="toolbar card">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="transitionOccInput" placeholder="Search your current occupation (e.g. Data Analyst,freinet school teacher)...">
+          </div>
+          <button type="button" class="btn primary" onclick="loadCareerTransitions()">Analyze Transitions</button>
+        </div>
+
+        <div id="transitionResults" class="transitions-grid"></div>
+      </section>
+
+      <!-- TAB 3: READINESS SCORE -->
+      <section id="candTabReadiness" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Transparent Career-Readiness Score (v1.0)</h2>
+            <p>An explainable calculation of your profile readiness against standardized target role requirements.</p>
+          </div>
+        </div>
+
+        <div class="card readiness-calculator-card">
+          <div class="field-inline">
+            <label>Target Role:</label>
+            <input type="text" id="readinessRoleInput" placeholder="e.g. Data Scientist, ML Engineer">
+            <button type="button" class="btn primary" onclick="recalculateReadiness()">Recalculate Score</button>
+          </div>
+
+          <div class="readiness-breakdown-grid">
+            <div class="card stat-card">
+              <span class="stat-label">Essential Skill Coverage (50% max)</span>
+              <strong id="readinessFactorEssential" class="stat-val">37.5 / 50</strong>
+              <div id="readinessMatchedSkills" class="skills-tag-cloud small"></div>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-label">Skill Proficiency Depth (20% max)</span>
+              <strong id="readinessFactorProf" class="stat-val">16.0 / 20</strong>
+              <small>Evaluates depth of experience on verified skills.</small>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-label">Experience Alignment (15% max)</span>
+              <strong id="readinessFactorExp" class="stat-val">10.0 / 15</strong>
+              <small>Alignment with mid-level benchmark experience.</small>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-label">Learning Progress (15% max)</span>
+              <strong id="readinessFactorLearning" class="stat-val">11.5 / 15</strong>
+              <small>Completed verified courses in JobBridge.</small>
+            </div>
+          </div>
+
+          <div class="card action-steps-card">
+            <h3>Actionable Next Steps to Raise Your Score</h3>
+            <ul id="readinessActionList"></ul>
+            <div class="disclaimer-note" id="readinessDisclaimer"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: LEARNING PATHWAYS -->
+      <section id="candTabLearning" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Personalized Learning Pathways & Free Courses</h2>
+            <p>Verified, authentic free courses and certifications mapped directly to your missing skills.</p>
+          </div>
+        </div>
+
+        <div id="learningCoursesList" class="courses-grid"></div>
+      </section>
+
+      <!-- TAB 5: JOBS EXPLORER -->
+      <section id="candTabJobs" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Explore Open Opportunities</h2>
+            <p>Verified job listings posted by recruiters with explainable candidate compatibility scores.</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="jobSearchQuery" oninput="debounceJobFilter()" placeholder="Search title, skills or company...">
+          </div>
+          <select id="jobFilterLocation" onchange="filterCandidateJobs()">
+            <option value="all">All Locations</option>
+            <option value="remote">Remote</option>
+            <option value="nagpur">Nagpur</option>
+            <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+          </select>
+          <select id="jobFilterType" onchange="filterCandidateJobs()">
+            <option value="all">All Employment Types</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="internship">Internship</option>
+          </select>
+        </div>
+
+        <div id="jobsExplorerList" class="job-grid"></div>
+      </section>
+
+      <!-- TAB 6: MY APPLICATIONS -->
+      <section id="candTabApplications" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Application Pipeline & History</h2>
+            <p>Track live application status transitions, recruiter review notes, and history.</p>
+          </div>
+        </div>
+        <div id="myApplicationsList" class="applications-container"></div>
+      </section>
+
+      <!-- TAB 7: SAVED JOBS -->
+      <section id="candTabSaved" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Bookmarked Jobs</h2>
+            <p>Roles you saved for later review or application.</p>
+          </div>
+        </div>
+        <div id="mySavedJobsList" class="job-grid"></div>
+      </section>
+
+      <!-- TAB 8: PROFILE & RESUME -->
+      <section id="candTabProfile" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Candidate Profile & Resume Center</h2>
+            <p>Manage your verified contact details, skills, and secure resume document.</p>
+          </div>
+          <button type="button" class="btn primary" onclick="saveProfileChanges()">Save Profile Updates</button>
+        </div>
+
+        <div class="profile-layout-grid">
+          <div class="card">
+            <h3>Personal Information</h3>
+            <div class="field"><label>Full Name</label><input type="text" id="profName"></div>
+            <div class="field"><label>Email (Account ID)</label><input type="email" id="profEmail" readonly></div>
+            <div class="field"><label>Phone</label><input type="text" id="profPhone"></div>
+            <div class="field"><label>Location</label><input type="text" id="profLocation"></div>
+            <div class="field"><label>Highest Education</label><input type="text" id="profEducation"></div>
+            <div class="field-row">
+              <div class="field"><label>Current Occupation</label><input type="text" id="profOccupation"></div>
+              <div class="field"><label>Experience (Years)</label><input type="number" id="profExperience" min="0"></div>
+            </div>
+            <div class="field"><label>Career Interest / Target Role</label><input type="text" id="profInterest"></div>
+            <div class="field"><label>Headline</label><input type="text" id="profHeadline"></div>
+            <div class="field"><label>Bio</label><textarea id="profBio" rows="3"></textarea></div>
+          </div>
+
+          <div class="card">
+            <h3>Resume Management</h3>
+            <div class="resume-box" id="resumeStatusBox">
+              <div id="resumeActiveInfo">No resume uploaded yet.</div>
+              <div class="resume-btn-group">
+                <button type="button" class="btn secondary" id="downloadResumeBtn" onclick="downloadMyResume()">Download Resume</button>
+                <button type="button" class="btn primary" onclick="document.getElementById('profResumeFileInput').click()">Upload New Resume</button>
+                <input type="file" id="profResumeFileInput" accept=".pdf,.docx,.txt" style="display:none" onchange="uploadProfileResume(this)">
+              </div>
+            </div>
+
+            <h3 style="margin-top:24px">Your Skills</h3>
+            <div class="skill-input-wrapper">
+              <input type="text" id="profSkillName" placeholder="Add skill...">
+              <select id="profSkillProf">
+                <option>Beginner</option>
+                <option selected>Intermediate</option>
+                <option>Advanced</option>
+                <option>Expert</option>
+              </select>
+              <button type="button" class="btn secondary" onclick="addProfileSkill()">+ Add</button>
+            </div>
+            <div id="profSkillsCloud" class="skills-tag-cloud" style="margin-top:12px"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 9: AI CAREER ASSISTANT -->
+      <section id="candTabAssistant" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>AI Career Assistant 🤖</h2>
+            <p>Grounded in your profile, target role, skill gaps, and verified learning resources.</p>
+          </div>
+        </div>
+
+        <div class="card chat-container">
+          <div id="chatHistory" class="chat-history">
+            <div class="chat-msg bot">
+              <div class="chat-bubble">
+                Hello! I am your JobBridge Career Assistant. I can analyze your skill gaps, explain how to boost your readiness score, and recommend verified free learning paths. What would you like to explore today?
+              </div>
+            </div>
+          </div>
+          <form class="chat-input-row" onsubmit="sendAssistantMessage(event)">
+            <input type="text" id="chatInput" placeholder="Ask e.g. 'What skills am I missing?' or 'How can I improve my readiness score?'...">
+            <button type="submit" class="btn primary">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 4. RECRUITER PORTAL                                      -->
+  <!-- ======================================================== -->
+  <section id="recruiterPortal" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="side-logo">Job<span class="brand-accent">Bridge</span></div>
+      <div class="mini-profile">
+        <div class="avatar" id="recAvatar">SJ</div>
+        <div>
+          <strong id="recSidebarName">Sarah Jenkins</strong>
+          <small id="recSidebarCompany">DataNova Technologies</small>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <button type="button" class="nav-btn active" onclick="showRecruiterTab('dashboard', this)">
+          <span class="nav-icon">📊</span> <span>Recruiter Overview</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showRecruiterTab('jobs', this)">
+          <span class="nav-icon">💼</span> <span>Job Postings</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showRecruiterTab('applicants', this)">
+          <span class="nav-icon">👥</span> <span>Applicant Pipeline</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showRecruiterTab('analytics', this)">
+          <span class="nav-icon">📈</span> <span>Recruitment Analytics</span>
+        </button>
+      </nav>
+
+      <button type="button" class="logout-btn" onclick="handleLogout()">
+        <span>↪</span> Sign Out
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">RECRUITER HIRING PORTAL</div>
+          <h1 id="recPageTitle">Recruitment Overview</h1>
+          <p id="recPageSubtitle">Manage company jobs, review qualified applicants, and make decisions.</p>
+        </div>
+        <div class="top-controls">
+          <button type="button" class="btn primary" onclick="openCreateJobModal()">＋ Post New Job</button>
+        </div>
+      </header>
+
+      <!-- RECRUITER TAB 1: DASHBOARD -->
+      <section id="recTabDashboard" class="portal-tab">
+        <div class="metric-row">
+          <div class="metric-card">
+            <span>Active Jobs</span>
+            <strong id="recMetricActiveJobs">0</strong>
+            <small>Currently published</small>
+          </div>
+          <div class="metric-card">
+            <span>Total Applications</span>
+            <strong id="recMetricTotalApps">0</strong>
+            <small>Received across roles</small>
+          </div>
+          <div class="metric-card">
+            <span>Awaiting Review</span>
+            <strong id="recMetricPendingApps">0</strong>
+            <small class="pill-amber">Needs attention</small>
+          </div>
+          <div class="metric-card">
+            <span>Shortlisted</span>
+            <strong id="recMetricShortlisted">0</strong>
+            <small class="pill-green">Strong candidates</small>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2>Recent Applicant Activity</h2>
+            <p>Latest candidate submissions for your open positions.</p>
+          </div>
+          <button type="button" class="btn secondary" onclick="showRecruiterTab('applicants')">View All Applicants →</button>
+        </div>
+        <div id="recRecentApplicantsTable" class="card table-container"></div>
+      </section>
+
+      <!-- RECRUITER TAB 2: JOBS -->
+      <section id="recTabJobs" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Job Management</h2>
+            <p>Publish, edit, pause, and close recruitment postings.</p>
+          </div>
+          <button type="button" class="btn primary" onclick="openCreateJobModal()">＋ Add New Job</button>
+        </div>
+        <div id="recJobsTable" class="card table-container"></div>
+      </section>
+
+      <!-- RECRUITER TAB 3: APPLICANTS PIPELINE -->
+      <section id="recTabApplicants" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Applicant Pipeline & Evaluation</h2>
+            <p>Review candidate profiles, download resumes, inspect compatibility scores, and record decisions.</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <select id="recApplicantJobFilter" onchange="loadRecruiterApplicants()">
+            <option value="">All Jobs</option>
+          </select>
+          <select id="recApplicantStatusFilter" onchange="loadRecruiterApplicants()">
+            <option value="all">All Application Stages</option>
+            <option value="Applied">Applied</option>
+            <option value="Under Review">Under Review</option>
+            <option value="Shortlisted">Shortlisted</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
+
+        <div id="recApplicantsList" class="applicants-grid"></div>
+      </section>
+
+      <!-- RECRUITER TAB 4: ANALYTICS -->
+      <section id="recTabAnalytics" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Recruitment Analytics & Insights</h2>
+            <p>Calculated metrics on applicant volume, conversion funnels, and compatibility.</p>
+          </div>
+        </div>
+        <div id="recAnalyticsContainer" class="analytics-grid"></div>
+      </section>
+    </main>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 5. PLATFORM ADMINISTRATOR PORTAL                         -->
+  <!-- ======================================================== -->
+  <section id="adminPortal" class="app-shell hidden">
+    <aside class="sidebar admin-sidebar">
+      <div class="side-logo">Job<span class="brand-accent">Bridge</span> <small class="admin-badge">ADMIN</small></div>
+      <div class="mini-profile">
+        <div class="avatar admin-avatar">PA</div>
+        <div>
+          <strong>Platform Admin</strong>
+          <small>System Security</small>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <button type="button" class="nav-btn active" onclick="showAdminTab('overview', this)">
+          <span class="nav-icon">🛡️</span> <span>Platform Metrics</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showAdminTab('users', this)">
+          <span class="nav-icon">👥</span> <span>User Moderation</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showAdminTab('jobs', this)">
+          <span class="nav-icon">💼</span> <span>Job Moderation</span>
+        </button>
+        <button type="button" class="nav-btn" onclick="showAdminTab('logs', this)">
+          <span class="nav-icon">📜</span> <span>Audit Logs</span>
+        </button>
+      </nav>
+
+      <button type="button" class="logout-btn" onclick="handleLogout()">
+        <span>↪</span> Sign Out
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">SYSTEM MANAGEMENT</div>
+          <h1>Platform Administration</h1>
+          <p>Protected governance console for platform safety, user moderation, and audit logs.</p>
+        </div>
+        <div class="admin-chip">● System Healthy & Enforced</div>
+      </header>
+
+      <!-- ADMIN TAB 1: OVERVIEW -->
+      <section id="adminTabOverview" class="portal-tab">
+        <div class="metric-row">
+          <div class="metric-card">
+            <span>Candidates</span>
+            <strong id="adminMetricCandidates">0</strong>
+            <small>Registered</small>
+          </div>
+          <div class="metric-card">
+            <span>Recruiters</span>
+            <strong id="adminMetricRecruiters">0</strong>
+            <small>Verified accounts</small>
+          </div>
+          <div class="metric-card">
+            <span>Total Jobs</span>
+            <strong id="adminMetricJobs">0</strong>
+            <small>Published across companies</small>
+          </div>
+          <div class="metric-card">
+            <span>Applications</span>
+            <strong id="adminMetricApps">0</strong>
+            <small>Total submitted</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Database & System Integrity</h3>
+          <p>Local SQLite database is running in Write-Ahead Logging (WAL) mode with strict foreign key constraints.</p>
+          <div id="adminDbStatusSummary"></div>
+        </div>
+      </section>
+
+      <!-- ADMIN TAB 2: USERS -->
+      <section id="adminTabUsers" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>User Account Moderation</h2>
+            <p>Inspect user accounts and suspend/reactivate access.</p>
+          </div>
+        </div>
+        <div id="adminUsersTable" class="card table-container"></div>
+      </section>
+
+      <!-- ADMIN TAB 3: JOBS -->
+      <section id="adminTabJobs" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Platform Job Listing Moderation</h2>
+            <p>Review and moderate job listings across all recruiter companies.</p>
+          </div>
+        </div>
+        <div id="adminJobsTable" class="card table-container"></div>
+      </section>
+
+      <!-- ADMIN TAB 4: AUDIT LOGS -->
+      <section id="adminTabLogs" class="portal-tab hidden">
+        <div class="section-heading">
+          <div>
+            <h2>Security & Administrative Audit Logs</h2>
+            <p>Complete auditable trace of administrative interventions and status transitions.</p>
+          </div>
+        </div>
+        <div id="adminLogsTable" class="card table-container"></div>
+      </section>
+    </main>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- MODALS                                                   -->
+  <!-- ======================================================== -->
+
+  <!-- Apply Modal -->
+  <div id="modalApply" class="modal-backdrop hidden">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modalApply')">✕</button>
+      <div class="eyebrow">JOB APPLICATION</div>
+      <h2 id="applyModalTitle">Apply for Role</h2>
+      <p id="applyModalCompany" class="subtitle">Company Name</p>
+
+      <form id="applyJobForm" onsubmit="submitJobApplication(event)">
+        <input type="hidden" id="applyJobId">
+        <div class="field">
+          <label>Cover Letter / Message to Recruiter</label>
+          <textarea id="applyCoverLetter" rows="4" placeholder="Briefly highlight your relevant skills and interest in this role..."></textarea>
+        </div>
+        <div class="resume-preview-notice">
+          <span>📄</span> Your verified profile resume will be attached to this application.
+        </div>
+        <button type="submit" class="btn primary full">Submit Application →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Create/Edit Job Modal -->
+  <div id="modalJob" class="modal-backdrop hidden">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modalJob')">✕</button>
+      <div class="eyebrow">RECRUITER ACTION</div>
+      <h2 id="jobModalHeading">Publish New Job</h2>
+
+      <form id="recruiterJobForm" onsubmit="handleSaveJob(event)">
+        <input type="hidden" id="editJobId">
+        <div class="field">
+          <label>Job Title *</label>
+          <input type="text" id="jobTitleInput" placeholder="e.g. Junior Data Scientist" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Location *</label>
+            <input type="text" id="jobLocationInput" placeholder="e.g. Nagpur / Remote" required>
+          </div>
+          <div class="field">
+            <label>Employment Type *</label>
+            <select id="jobTypeInput">
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Internship</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Min Salary (₹ Annual)</label>
+            <input type="number" id="jobSalaryMin" value="450000">
+          </div>
+          <div class="field">
+            <label>Max Salary (₹ Annual)</label>
+            <input type="number" id="jobSalaryMax" value="800000">
+          </div>
+        </div>
+        <div class="field">
+          <label>Minimum Experience (Years)</label>
+          <input type="number" id="jobExpMin" value="1" min="0">
+        </div>
+        <div class="field">
+          <label>Required Skills (Comma separated) *</label>
+          <input type="text" id="jobSkillsInput" placeholder="e.g. Python, SQL, Machine Learning" required>
+        </div>
+        <div class="field">
+          <label>Job Description *</label>
+          <textarea id="jobDescInput" rows="4" placeholder="Describe the responsibilities and requirements..." required></textarea>
+        </div>
+        <button type="submit" class="btn primary full">Save Job Posting →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Recruiter Applicant Decision Modal -->
+  <div id="modalApplicantDecision" class="modal-backdrop hidden">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modalApplicantDecision')">✕</button>
+      <div class="eyebrow">CANDIDATE EVALUATION</div>
+      <h2 id="decisionCandidateName">Candidate Name</h2>
+      <p id="decisionJobTitle" class="subtitle">Applied Role</p>
+
+      <div class="decision-details" id="decisionDetailsContent"></div>
+
+      <form id="applicantDecisionForm" onsubmit="handleApplicantDecision(event)">
+        <input type="hidden" id="decisionAppId">
+        <div class="field">
+          <label>Update Application Stage</label>
+          <select id="decisionNewStatus">
+            <option value="Under Review">Under Review</option>
+            <option value="Shortlisted">Shortlisted</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Internal Note / Feedback to Candidate</label>
+          <textarea id="decisionNote" rows="3" placeholder="Optional review note or next-step instructions..."></textarea>
+        </div>
+        <button type="submit" class="btn primary full">Record Decision & Notify Candidate →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

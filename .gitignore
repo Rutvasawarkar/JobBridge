@@ -1,0 +1,100 @@
+
+# ==================================================
+# JOBBRIDGE — Python / Flask / ML
+# ==================================================
+
+# ---------- Python virtual environments ----------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- Python cache and compiled files ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# ---------- Secrets and environment configuration ----------
+.env
+.env.*
+!.env.example
+data/.session_secret
+*.pem
+*.key
+
+# ---------- Local databases and temporary files ----------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.bak
+*.backup
+
+# ---------- Raw dataset archives ----------
+data/*.zip
+data/**/*.zip
+
+# ---------- Extracted raw source datasets ----------
+# PLFS source files
+data/PLFS/
+
+# Extracted O*NET source files
+data/ONET/O_NET database/
+data/ONET/Data_LayoutPLFS_2023-24.xlsx
+
+# ---------- Very large generated datasets ----------
+# Keep local; too large for ordinary GitHub Git uploads.
+data/personalized_recommendations.csv
+data/skill_gap_dataset.csv
+data/worker_skill_profiles.csv
+
+# ---------- User uploads and private documents ----------
+uploads/
+user_uploads/
+private_uploads/
+resumes/
+*.resume
+
+# ---------- Logs and test artifacts ----------
+*.log
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ---------- Generated reports and temporary files ----------
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ---------- Windows and macOS ----------
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# ---------- IDE settings ----------
+.vscode/
+.idea/
+
+# ---------- Generated model files (review before enabling) ----------
+# Uncomment these only if you decide to exclude model artifacts:
+# *.pkl
+# *.joblib
+# *.h5
+# *.keras
+# *.pt
+# *.pth
+# *.onnx
+
+# ---------- Build / distribution ----------
+build/
+dist/
+*.egg-info/
+api_before_auth.py
